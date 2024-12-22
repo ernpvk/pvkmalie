@@ -5,7 +5,6 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-
       <main className="pt-16 md:pt-20">
         <section id="home" className="min-h-screen flex items-center">
           <Hero />
