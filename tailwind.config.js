@@ -6,15 +6,15 @@ module.exports = {
       colors: {
         primary: {
           DEFAULT: "#163a2e",
-          light: "##60a596",
+          light: "#60a596",
         },
         secondary: {
           DEFAULT: "#f1d4c7",
           neon: "#ff7174",
           yellow: "#f7e68e",
         },
-        background: "#f8f7f3",
-        backgroundlight: "#fffcf9",
+        pale: "#f8f7e7",
+        whitePale: "#fffcf9",
         accent: "#abcdef",
       },
       fontFamily: {

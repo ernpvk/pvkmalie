@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300bg-transparent">
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#home" className="text-2xl font-bold text-gray-800">
@@ -61,7 +61,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Responsive menu */}
           <button className="md:hidden text-gray-600 hover:text-gray-900">
             <svg
               className="w-6 h-6"

@@ -1,11 +1,12 @@
 import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
 
-const App: React.FC = () => {
+function App() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="pt-16 md:pt-20">
+      {/* pt-16 md:pt-20 */}
+      <main className="">
         <section id="home" className="min-h-screen flex items-center">
           <Hero />
         </section>
@@ -22,10 +23,9 @@ const App: React.FC = () => {
           <div>Contact </div>
         </section>
       </main>
-
       <div>Footer</div>
     </div>
   );
-};
+}
 
 export default App;
