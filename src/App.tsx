@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Navbar from "./components/Navbar";
+import Hero from "./pages/Hero";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="min-h-screen">
+      <Navbar />
 
-export default App
+      <main className="pt-16 md:pt-20">
+        <section id="home" className="min-h-screen flex items-center">
+          <Hero />
+        </section>
+
+        <section id="about" className="min-h-screen flex items-center">
+          <div>About</div>
+        </section>
+
+        <section id="projects" className="min-h-screen flex items-center">
+          <div>Project</div>
+        </section>
+
+        <section id="contact" className="min-h-screen flex items-center">
+          <div>Contact </div>
+        </section>
+      </main>
+
+      <div>Footer</div>
+    </div>
+  );
+};
+
+export default App;
