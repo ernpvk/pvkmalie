@@ -78,9 +78,12 @@ function Hero() {
 
         <div className="max-w-4xl font-besley-regular text-1xl md:text-3xl text-primary tracking-wide mb-20">
           <p className="leading-relaxed">
-            ₊* she crafts beautiful digital spaces & fast with experiments ˗ˋ bringing ideas to life
-            with code & cool CSS ｡˚ when not coding, you'll find her at the beach and playing with
-            cats and dogs ꕁ
+            <span className="italic">₊*</span> she crafts{" "}
+            <span className="font-besley-regular-italic">beautiful digital spaces</span> & fast with
+            experiments ˗ˋ bringing <span className="italic">ideas to life</span> with code &{" "}
+            <span className="underline">cool CSS</span> ｡˚ when not coding, you'll find her
+            at the <span className="font-besley-regular-italic">beach</span> and playing with cats
+            and dogs ꕁ
           </p>
         </div>
         <div className="flex justify-end ">
@@ -88,7 +91,7 @@ function Hero() {
             onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
             className="animate-pulse
               text-xs
-              text-primary font-space-mono-regular py-1 px-2 rounded-xs hover:underline hover:bg-primary hover:text-pale border-b border-primary transition-colors md:text-sm"
+              text-primary font-space-mono-regular py-1 px-2 rounded-xs hover:underline hover:bg-primary hover:text-pale border-b border-primary transition-colors md:text-sm shadow-lg"
           >
             ↓ Discover More
           </button>
