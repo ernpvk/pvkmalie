@@ -47,7 +47,7 @@
 }
 
 @font-face {
-  font-family: "Metallophile";
+  font-family: "Metallophile-Light";
   src: url("/src/assets/fonts/Metallophile\ Sp8\ Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
@@ -55,7 +55,7 @@
 }
 
 @font-face {
-  font-family: "Metallophile";
+  font-family: "Metallophile-Light-Italic";
   src: url("/src/assets/fonts/Metallophile\ Sp8\ Light\ Italic.woff") format("woff");
   font-weight: 300;
   font-style: italic;
@@ -63,7 +63,7 @@
 }
 
 @font-face {
-  font-family: "Metallophile";
+  font-family: "Metallophile-Medium";
   src: url("/src/assets/fonts/Metallophile\ Sp8\ Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
@@ -71,9 +71,41 @@
 }
 
 @font-face {
-  font-family: "Metallophile";
+  font-family: "Metallophile-Medium-Italic";
   src: url("/src/assets/fonts/Metallophile\ Sp8\ Medium\ Italic.woff") format("woff");
   font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SpaceMono-Regular";
+  src: url("/src/assets/fonts/SpaceMono-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SpaceMono-Regular-Italic";
+  src: url("/src/assets/fonts/SpaceMono-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SpaceMono-Bold";
+  src: url("/src/assets/fonts/SpaceMono-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SpaceMono-Bold-Italic";
+  src: url("/src/assets/fonts/SpaceMono-BoldItalic.woff") format("woff");
+  font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
