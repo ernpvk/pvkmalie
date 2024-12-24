@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { title: "Home", href: "#home" },
   { title: "About", href: "#about" },
   { title: "Projects", href: "#projects" },
   { title: "Contact", href: "#contact" },
@@ -38,27 +37,33 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16 md:h-20">
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur px-5 py-2 lg:p-0">
+      <div className="container mx-auto">
+        <div className="flex items-center justify-between h-10 md:h-14">
           <a href="#home" className="text-2xl font-bold text-gray-800">
             LOGO
           </a>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 font-space-mono-regular">
             {navLinks.map(({ title, href }) => (
               <button
                 key={href}
                 onClick={() => scrollToSection(href)}
-                className={`text-sm font-medium transition-colors duration-300 ${
+                className={`text-sm transition-colors duration-300 ${
                   activeSection === href.slice(1)
-                    ? "text-blue-600"
-                    : "text-gray-600 hover:text-blue-600"
+                    ? "text-secondary-neon"
+                    : "text-stone-600 hover:text-red-300"
                 }`}
               >
                 {title}
               </button>
             ))}
+            <button
+              className="text-sm transition-colors duration-300 
+                text-stone-500 hover:text-secondary hover:bg-secondary-neon bg-secondary px-2 py-1"
+            >
+              resume
+            </button>
           </div>
 
           {/* Responsive menu */}
