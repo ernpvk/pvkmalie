@@ -60,7 +60,7 @@ function Hero() {
   return (
     <div className="relative w-screen h-screen overflow-hidden flex p-8 justify-center items-center bg-whitePale">
       <div
-        className="app px-10 md:px-30 lg:px-40 mt-10 pt-10 md:pt-30 lg:pt-40  pb-10 md:pb-10 lg:pb-20  max-w-6xl relative overflow-hidden  text-primary"
+        className="app px-10 md:px-30 lg:px-40 mt-10 pt-10 md:pt-30 lg:pt-40  pb-10 md:pb-10 lg:pb-20  max-w-6xl relative overflow-hidden  text-stone-600"
         ref={appRef}
         style={
           {
@@ -93,7 +93,7 @@ function Hero() {
             }
             className="animate-pulse
               text-xs
-              text-primary font-button py-1 px-2 rounded-xs hover:underline hover:bg-primary hover:text-pale border-b border-primary transition-colors md:text-sm shadow-lg"
+              text-stone-600font-button py-1 px-2 rounded-xs hover:underline hover:bg-stone-600 hover:text-pale border-b border-stone-600 transition-colors md:text-sm shadow-lg"
           >
             ↓ Discover More
           </button>

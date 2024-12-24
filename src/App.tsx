@@ -14,9 +14,9 @@ function App() {
         </section>
         <section
           id="typeWrite"
-          className="h-60 flex items-center justify-center bg-whitePale text-stone-600"
+          className="h-60 flex items-center justify-center bg-whitePale text-stone-500"
         >
-          <TypeWriter text="Here comes the adorable Pavika..." speed={150} delay={2000} />
+          <TypeWriter text="Let's introduce pavika..." speed={150} delay={2000} />
         </section>
         <section id="about" className="min-h-screen flex items-center">
           <About />
