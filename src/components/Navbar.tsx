@@ -7,7 +7,8 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("");
+  const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +22,11 @@ const Navbar = () => {
 
         if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
           setActiveSection(sectionId);
+        }
+        if (sectionId === "hero" && window.scrollY <= sectionTop + 40) {
+          setShowNav(false);
+        } else if (sectionId === "hero" && window.scrollY > sectionTop) {
+          setShowNav(true);
         }
       });
     };
@@ -37,7 +43,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur px-5 py-2 lg:p-0">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 px-5 py-2 lg:p-0 transition-all duration-500 ${
+        showNav ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-20"
+      }`}
+    >
       <div className="container mx-auto">
         <div className="flex items-center justify-between h-10 md:h-14">
           <a href="#home" className="text-2xl font-bold text-gray-800">
