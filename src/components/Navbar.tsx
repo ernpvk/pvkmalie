@@ -44,7 +44,7 @@ const Navbar = () => {
             LOGO
           </a>
 
-          <div className="hidden md:flex items-center space-x-8 font-space-mono-regular">
+          <div className="hidden md:flex items-center space-x-8 font-button">
             {navLinks.map(({ title, href }) => (
               <button
                 key={href}

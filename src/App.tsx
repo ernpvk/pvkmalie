@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
 import TypeWriter from "./components/TypeWriter";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -11,11 +12,14 @@ function App() {
         <section id="home" className="min-h-screen flex items-center">
           <Hero />
         </section>
-        <section id="typeWrite" className="h-80 flex items-center justify-center">
-          <TypeWriter text="Well, Let's meet Pavika..." speed={150} delay={2000} />
+        <section
+          id="typeWrite"
+          className="h-60 flex items-center justify-center bg-whitePale text-stone-600"
+        >
+          <TypeWriter text="Here comes the adorable Pavika..." speed={150} delay={2000} />
         </section>
         <section id="about" className="min-h-screen flex items-center">
-          <div>About</div>
+          <About />
         </section>
 
         <section id="projects" className="min-h-screen flex items-center">

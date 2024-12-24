@@ -80,9 +80,10 @@ function Hero() {
           <p className="leading-relaxed">
             <span className="font-headline-italic">₊*</span> she crafts{" "}
             <span className="">beautiful digital spaces</span> & fast with experiments ˗ˋ bringing{" "}
-            <span className="italic">ideas to life</span> with code &{" "}
-            <span className="underline">cool CSS</span> ｡˚ when not coding, you'll find her at the{" "}
-            <span className="">beach</span> and playing with cats and dogs ꕁ
+            <span className="italic">ideas to life</span> with{" "}
+            <span className="underline">code</span> & <span className="underline">creativity</span>{" "}
+            ｡˚ when not coding, you'll find her at the <span className="">beach</span> and playing
+            with cats and dogs ꕁ
           </p>
         </div>
         <div className="flex justify-end ">
@@ -92,7 +93,7 @@ function Hero() {
             }
             className="animate-pulse
               text-xs
-              text-primary font-space-mono-regular py-1 px-2 rounded-xs hover:underline hover:bg-primary hover:text-pale border-b border-primary transition-colors md:text-sm shadow-lg"
+              text-primary font-button py-1 px-2 rounded-xs hover:underline hover:bg-primary hover:text-pale border-b border-primary transition-colors md:text-sm shadow-lg"
           >
             ↓ Discover More
           </button>

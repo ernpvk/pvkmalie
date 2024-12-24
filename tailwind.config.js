@@ -5,8 +5,8 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#14524c",
-          primary2: "#60a596",
+          DEFAULT: "#f47453",
+          2: "#88ae48",
         },
         secondary: {
           DEFAULT: "#f1d4c7",
@@ -14,7 +14,8 @@ module.exports = {
           yellow: "#f7e68e",
         },
         pale: "#f8f7e7",
-        whitePale: "#fffcf9",
+        whitePale: "#fffdfc",
+        // whitePale: "#fffcf9",
         accent: "#abcdef",
       },
       fontFamily: {
@@ -24,10 +25,10 @@ module.exports = {
         "metallophile-light-italic": ["Metallophile-Light-Italic", "sans-serif"],
         "metallophile-medium": ["Metallophile-Medium", "sans-serif"],
         "metallophile-medium-italic": ["Metallophile-Medium-Italic", "sans-serif"],
-        "space-mono-regular": ["SpaceMono-Regular", "monospace"],
-        "space-mono-regular-italic": ["SpaceMono-Regular-Italic", "monospace"],
-        "space-mono-bold": ["SpaceMono-Bold", "monospace"],
-        "space-mono-bold-italic": ["SpaceMono-Bold-Italic", "monospace"],
+        button: ["SpaceMono-Regular", "monospace"],
+        "button-italic": ["SpaceMono-Regular-Italic", "monospace"],
+        "button-bold": ["SpaceMono-Bold", "monospace"],
+        "button-bold-italic": ["SpaceMono-Bold-Italic", "monospace"],
       },
     },
   },
