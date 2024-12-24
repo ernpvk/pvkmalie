@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#165f52",
+          DEFAULT: "#14524c",
           primary2: "#60a596",
         },
         secondary: {
@@ -18,12 +18,8 @@ module.exports = {
         accent: "#abcdef",
       },
       fontFamily: {
-        "besley-regular": ["Besley-Regular", "serif"],
-        "besley-regular-italic": ["Besley-Regular-Italic", "serif"],
-        "besley-medium": ["Besley-Medium", "serif"],
-        "besley-medium-italic": ["Besley-Medium-Italic", "serif"],
-        "besley-bold": ["Besley-Bold", "serif"],
-        "besley-bold-italic": ["Besley-Bold-Italic", "serif"],
+        headline: ["ClearFace-Regular", "serif"],
+        "headline-italic": ["ClearFace-Regular-Italic", "serif"],
         "metallophile-light": ["Metallophile-Light", "sans-serif"],
         "metallophile-light-italic": ["Metallophile-Light-Italic", "sans-serif"],
         "metallophile-medium": ["Metallophile-Medium", "sans-serif"],

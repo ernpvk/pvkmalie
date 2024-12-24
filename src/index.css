@@ -1,47 +1,15 @@
 @font-face {
-  font-family: "Besley-Regular";
-  src: url("/src/assets/fonts/Besley-Book.woff") format("woff");
+  font-family: "ClearFace-Regular";
+  src: url("/src/assets/fonts/ClearfaceStd-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Besley-Regular-Italic";
-  src: url("/src/assets/fonts/Besley-BookItalic.woff") format("woff");
+  font-family: "ClearFace-Regular-Italic";
+  src: url("/src/assets/fonts/ClearfaceStd-Italic.woff") format("woff");
   font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Besley-Medium";
-  src: url("/src/assets/fonts/Besley-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Besley-Medium-Italic";
-  src: url("/src/assets/fonts/Besley-MediumItalic.woff") format("woff");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Besley-Bold";
-  src: url("/src/assets/fonts/Besley-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Besley-Bold-Italic";
-  src: url("/src/assets/fonts/Besley-BoldItalic.woff") format("woff");
-  font-weight: 700;
   font-style: italic;
   font-display: swap;
 }

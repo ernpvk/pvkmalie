@@ -60,7 +60,7 @@ function Hero() {
   return (
     <div className="relative w-screen h-screen overflow-hidden flex p-8 justify-center items-center bg-whitePale">
       <div
-        className="app px-10 md:px-30 lg:px-40 mt-10 pt-10 md:pt-30 lg:pt-40  pb-10 md:pb-10 lg:pb-20  max-w-6xl relative overflow-hidden"
+        className="app px-10 md:px-30 lg:px-40 mt-10 pt-10 md:pt-30 lg:pt-40  pb-10 md:pb-10 lg:pb-20  max-w-6xl relative overflow-hidden  text-primary"
         ref={appRef}
         style={
           {
@@ -69,26 +69,27 @@ function Hero() {
           } as React.CSSProperties
         }
       >
-        <h1 className="font-besley-medium text-5xl md:text-7xl mb-8 leading-tight text-primary">
+        <h1 className="font-headline text-5xl md:text-7xl mb-8 leading-tight ">
           pavika
           <span className="block text-4xl md:text-6xl mt-4">
             is a <span className="italic">frontend developer</span>
           </span>
         </h1>
 
-        <div className="max-w-4xl font-besley-regular text-1xl md:text-3xl text-primary tracking-wide mb-20">
+        <div className="max-w-4xl font-headline text-1xl md:text-3xl tracking-wide mb-20">
           <p className="leading-relaxed">
-            <span className="italic">₊*</span> she crafts{" "}
-            <span className="font-besley-regular-italic">beautiful digital spaces</span> & fast with
-            experiments ˗ˋ bringing <span className="italic">ideas to life</span> with code &{" "}
-            <span className="underline">cool CSS</span> ｡˚ when not coding, you'll find her
-            at the <span className="font-besley-regular-italic">beach</span> and playing with cats
-            and dogs ꕁ
+            <span className="font-headline-italic">₊*</span> she crafts{" "}
+            <span className="">beautiful digital spaces</span> & fast with experiments ˗ˋ bringing{" "}
+            <span className="italic">ideas to life</span> with code &{" "}
+            <span className="underline">cool CSS</span> ｡˚ when not coding, you'll find her at the{" "}
+            <span className="">beach</span> and playing with cats and dogs ꕁ
           </p>
         </div>
         <div className="flex justify-end ">
           <button
-            onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() =>
+              document.getElementById("typeWrite")?.scrollIntoView({ behavior: "smooth" })
+            }
             className="animate-pulse
               text-xs
               text-primary font-space-mono-regular py-1 px-2 rounded-xs hover:underline hover:bg-primary hover:text-pale border-b border-primary transition-colors md:text-sm shadow-lg"
