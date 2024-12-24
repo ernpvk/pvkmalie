@@ -51,8 +51,8 @@ const Navbar = () => {
                 onClick={() => scrollToSection(href)}
                 className={`text-sm transition-colors duration-300 ${
                   activeSection === href.slice(1)
-                    ? "text-secondary-neon"
-                    : "text-stone-600 hover:text-red-300"
+                    ? "text-primary-2 font-button-bold"
+                    : "text-stone-600 hover:text-primary-2 "
                 }`}
               >
                 {title}
