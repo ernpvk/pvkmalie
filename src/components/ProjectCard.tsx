@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 interface ProjectCardProps {
   project: {
-    id: number;
+    id: string;
     name: string;
     shortDescription: string;
     thumbnail: string;

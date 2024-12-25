@@ -1,5 +1,5 @@
 export interface ProjectInfo {
-  id: number;
+  id: string;
   name: string;
   shortDescription: string;
   fullDescription: string;
@@ -21,7 +21,7 @@ export interface ProjectInfo {
 }
 export const PROJECTS: ProjectInfo[] = [
   {
-    id: 0,
+    id: "pvkmalie-port",
     name: "PvkMalie Website",
     shortDescription: "Personal website to showcase my projects, skills, and myself",
     fullDescription:
@@ -46,7 +46,7 @@ export const PROJECTS: ProjectInfo[] = [
     ],
   },
   {
-    id: 1,
+    id: "jodjai",
     name: "JodJai",
     shortDescription:
       "Empowering users to track and understand their emotion by daily mood logging and daily journal",
@@ -72,7 +72,7 @@ export const PROJECTS: ProjectInfo[] = [
   },
 
   {
-    id: 2,
+    id: "jonghong",
     name: "JongHong",
     shortDescription: "Helping KMUTT students efficiently discover and book campus workspaces",
     fullDescription:
@@ -96,7 +96,7 @@ export const PROJECTS: ProjectInfo[] = [
   },
 
   {
-    id: 3,
+    id: "majorapp",
     name: "Major App",
     shortDescription: "Enabling moviegoers to seamlessly browse and book cinema tickets",
     fullDescription:
@@ -116,7 +116,7 @@ export const PROJECTS: ProjectInfo[] = [
     ],
   },
   {
-    id: 4,
+    id: "carepaw",
     name: "CarePaw",
     shortDescription:
       "Helping pet owners manage and track their pets' card and learn pet tips for their lovely one",
@@ -141,7 +141,7 @@ export const PROJECTS: ProjectInfo[] = [
     ],
   },
   {
-    id: 5,
+    id: "helmet-detection",
     name: "Helmet Detection",
     shortDescription:
       "Enhancing road safety through AI-powered real-time helmet detection and monitoring",
