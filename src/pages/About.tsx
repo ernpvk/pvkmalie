@@ -14,7 +14,7 @@ function About() {
         </div>
 
         <div className="w-full md:w-1/2 p-4 md:p-0 space-y-6">
-          <h1 className="text-2xl lg:text-4xl font-bold text-primary font-headline">About me</h1>
+          <h1 className="text-2xl lg:text-6xl font-bold text-primary font-headline">About me</h1>
           <div className="text-stone-500 text-md lg:text-xl font-body-light md:w-4/5">
             Hi! I'm Pavika Malipan (Earn), a <span className="ordinal">3rd</span> year computer
             science student at KMUTT. I'm passionate about creating meaningful solutions through
@@ -33,7 +33,7 @@ function About() {
       </div>
 
       {/* Skills Section */}
-      <div className="w-full md:pl-32 lg:pl-48">
+      <div className="w-full pl-2 md:pl-40 lg:pl-64 pb-20">
         <div>
           <p
             className="inline-block text-md lg:text-xl px-2 py-1 md:px-4 md:py-2 font-body-medium shadow-md text-stone-600"

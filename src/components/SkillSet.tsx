@@ -20,7 +20,7 @@ export default function SkillSets({ skill, skillSetName }: SkillSetsProps) {
             className="flex font-body-light items-center gap-1.5 sm:gap-2 
                      bg-stone-100 p-1.5 sm:p-2 
                      border-[1px] border-stone-200
-                     hover:border-stone-400 hover:shadow-md
+                      hover:shadow-md hover:scale-110
                      transition-all duration-300 ease-in-out
                      cursor-pointer"
           >

@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./pages/Hero";
 import TypeWriter from "./components/TypeWriter";
 import About from "./pages/About";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -22,8 +23,8 @@ function App() {
           <About />
         </section>
 
-        <section id="projects" className="min-h-screen flex items-center">
-          <div>Project</div>
+        <section id="projects" className="min-h-screen">
+          <Projects />
         </section>
 
         <section id="contact" className="min-h-screen flex items-center">
