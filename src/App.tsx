@@ -9,14 +9,14 @@ function App() {
       <Navbar />
       {/* pt-16 md:pt-20 */}
       <main className="">
-        <section id="home" className="min-h-screen flex items-center">
+        <section id="hero" className="min-h-screen flex items-center">
           <Hero />
         </section>
         <section
           id="typeWrite"
           className="h-60 flex items-center justify-center bg-whitePale text-stone-500"
         >
-          <TypeWriter text="Let's introduce pavika..." speed={150} delay={2000} />
+          <TypeWriter text="Let's meet pavika..." speed={150} delay={2000} />
         </section>
         <section id="about" className="min-h-screen flex items-center">
           <About />

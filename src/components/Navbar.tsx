@@ -23,7 +23,7 @@ const Navbar = () => {
         if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
           setActiveSection(sectionId);
         }
-        if (sectionId === "hero" && window.scrollY <= sectionTop + 40) {
+        if (sectionId === "hero" && window.scrollY <= sectionTop) {
           setShowNav(false);
         } else if (sectionId === "hero" && window.scrollY > sectionTop) {
           setShowNav(true);
