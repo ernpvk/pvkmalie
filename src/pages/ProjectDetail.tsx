@@ -12,7 +12,7 @@ export default function ProjectDetail() {
       <div className="min-h-screen flex flex-col items-center justify-center gap-4">
         <h1 className="text-2xl font-headline text-stone-600">Project not found</h1>
         <button onClick={() => navigate("/")} className="text-primary hover:underline font-button">
-          <ArrowLeft /> Back to Home
+          Back to Home
         </button>
       </div>
     );
@@ -25,7 +25,7 @@ export default function ProjectDetail() {
           onClick={() => navigate("/")}
           className="flex items-center gap-2 text-stone-600 hover:text-secondary-2 transition-colors mb-8 font-button"
         >
-          Back to Home
+          <ArrowLeft /> Back to Home
         </button>
       </div>
     </div>

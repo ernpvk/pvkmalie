@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { getAuraColor } from "../utils/getAuraColor";
 
 interface ProjectCardProps {
   project: {
@@ -59,7 +60,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           className="w-80 h-80 object-contain relative z-10 group-hover:scale-[1.05] transition-transform duration-300"
         />
         <div
-          className={`absolute w-64 h-64 bg-${project.colorAura}-200/50 rounded-full blur-xl top-0 right-0`}
+          className={`absolute w-64 h-64 ${getAuraColor(
+            project.colorAura
+          )} rounded-full blur-xl top-0 right-0`}
         />
       </div>
     </div>
