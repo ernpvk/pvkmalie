@@ -25,7 +25,7 @@ export const PROJECTS: ProjectInfo[] = [
     name: "PvkMalie Website",
     shortDescription: "Personal website to showcase my projects, skills, and myself",
     fullDescription:
-      "A modern, responsive portfolio website built with React and Tailwind CSS. With smooth animations, dark mode support, and a clean, minimalist design that effectively presents my work, abilities, creativity, and myself",
+      "A portfolio website that presents my work, abilities, creativity, and express myself throughout this digital device built with React and Tailwind CSS. With smooth animations, dark mode support, and a clean, minimalist design",
     thumbnail: "/src/assets/images/projects/pvkmalie/thumbnail.png",
     colorAura: "blue",
     images: [
@@ -49,9 +49,9 @@ export const PROJECTS: ProjectInfo[] = [
     id: 1,
     name: "JodJai",
     shortDescription:
-      "Empowering users to track and understand their emotion through daily mood logging and daily journal",
+      "Empowering users to track and understand their emotion by daily mood logging and daily journal",
     fullDescription:
-      "A comprehensive mood tracking application that promotes SDG3 Good Health and Well-being mental well-being and emotional awareness. The app features daily mood logging capabilities, weekly mood summaries, and journaling functionality, all designed with user engagement and accessibility in mind.",
+      "A comprehensive mood tracking application that promotes SDG3 Good Health and Well-being mental well-being and emotional awareness. The app features daily mood logging capabilities, weekly mood summaries, and journal functionality, all designed with user engagement and accessibility in mind.",
     thumbnail: "/src/assets/images/projects/jodjai/thumbnail.png",
     colorAura: "purple",
     images: [
@@ -66,7 +66,7 @@ export const PROJECTS: ProjectInfo[] = [
     role: "Front-end Developer",
     responsibilities: [
       "Developed the frontend using Flutter",
-      "Collaborated on UI/UX design using Figma",
+      "Designed UI/UX using Figma",
       "Enhanced user engagement and accessibility",
     ],
   },
@@ -98,8 +98,7 @@ export const PROJECTS: ProjectInfo[] = [
   {
     id: 3,
     name: "Major App",
-    shortDescription:
-      "Enabling moviegoers to seamlessly browse and book cinema tickets through the Harmoni ecosystem",
+    shortDescription: "Enabling moviegoers to seamlessly browse and book cinema tickets",
     fullDescription:
       "Part of the larger Harmoni app ecosystem, Major is a web application for booking movie tickets. Developed in collaboration with 40+ computer science students, the application provides a seamless movie ticket booking experience.",
     thumbnail: "/src/assets/images/projects/major/thumbnail.png",
@@ -120,9 +119,9 @@ export const PROJECTS: ProjectInfo[] = [
     id: 4,
     name: "CarePaw",
     shortDescription:
-      "Helping pet owners manage and track their pets' care needs through comprehensive digital profiles",
+      "Helping pet owners manage and track their pets' card and learn pet tips for their lovely one",
     fullDescription:
-      "A solo project focused on creating a web application for managing pet information and providing care tips. The full-stack application features CRUD operations for pet cards and comprehensive pet care guidance.",
+      "A first solo project focused on creating a web application for managing pet information and providing care tips. The full-stack application features CRUD operations for pet cards and comprehensive pet care guidance.",
     thumbnail: "/src/assets/images/projects/carepaw/thumbnail.png",
     colorAura: "green",
     images: [
@@ -145,7 +144,7 @@ export const PROJECTS: ProjectInfo[] = [
     id: 5,
     name: "Helmet Detection",
     shortDescription:
-      "Enhancing workplace safety through AI-powered real-time helmet detection and monitoring",
+      "Enhancing road safety through AI-powered real-time helmet detection and monitoring",
     fullDescription:
       "An application that uses YOLOv8 for real-time helmet detection, featuring a web interface for interaction with the AI model. The system combines frontend technologies with Python backend for efficient object detection.",
     thumbnail: "/src/assets/images/projects/helmet/thumbnail.png",
