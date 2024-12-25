@@ -18,8 +18,8 @@ function About() {
           <div className="text-stone-500 text-md lg:text-xl font-body-light md:w-4/5">
             Hi! I'm Pavika Malipan (Earn), a <span className="ordinal">3rd</span> year computer
             science student at KMUTT. I'm passionate about creating meaningful solutions through
-            code, transforming beautiful visuals into tangible interfaces, crafting engaging
-            experiences that people enjoy to use.
+            code, transforming beautiful visuals into tangible interfaces, crafting experiences that
+            people enjoy to use.
           </div>
           <div className="flex justify-end md:w-4/5">
             <button className="hover:animate-none group flex items-center gap-2 mt-1 md:mt-6 text-xs md:text-sm font-button-italic text-primary-2 hover:text-primary-2/80 transition-colors duration-300 border-b-2 border-primary-2">

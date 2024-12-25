@@ -10,9 +10,12 @@ function Projects() {
           A collection of my course and personal projects
         </p>
       </div>
-      <div className="flex flex-col gap-5">
-        {PROJECTS.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+      <div className="grid grid-col  divide-y">
+        {PROJECTS.map((project, index) => (
+          <div key={project.id} className="py-8">
+            <ProjectCard project={project} />
+   
+          </div>
         ))}
       </div>
     </div>
