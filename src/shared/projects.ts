@@ -52,7 +52,7 @@ export const PROJECTS: ProjectInfo[] = [
       "Empowering users to track and understand their emotion by daily mood logging and daily journal",
     fullDescription:
       "A comprehensive mood tracking application that promotes SDG3 Good Health and Well-being mental well-being and emotional awareness. The app features daily mood logging capabilities, weekly mood summaries, and journal functionality, all designed with user engagement and accessibility in mind.",
-    thumbnail: "/src/assets/images/projects/jodjai/thumbnail.png",
+    thumbnail: "",
     colorAura: "purple",
     images: [
       "/src/assets/images/projects/jodjai/1.png",

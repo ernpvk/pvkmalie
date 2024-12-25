@@ -1,38 +1,17 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import Hero from "./pages/Hero";
-import TypeWriter from "./components/TypeWriter";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetail";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <Router>
       <Navbar />
-      {/* pt-16 md:pt-20 */}
-      <main className="">
-        <section id="hero" className="min-h-screen flex items-center">
-          <Hero />
-        </section>
-        <section
-          id="typeWrite"
-          className="h-96  flex items-center justify-center bg-whitePale text-stone-500 "
-        >
-          <TypeWriter text="Let's meet pavika..." speed={150} delay={2000} />
-        </section>
-        <section id="about" className="min-h-screen flex items-center ">
-          <About />
-        </section>
-
-        <section id="projects" className="min-h-screen">
-          <Projects />
-        </section>
-
-        <section id="contact" className="min-h-screen flex items-center">
-          <div>Contact </div>
-        </section>
-      </main>
-      <div>Footer</div>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/:id" element={<ProjectDetail />} />
+      </Routes>
+    </Router>
   );
 }
 

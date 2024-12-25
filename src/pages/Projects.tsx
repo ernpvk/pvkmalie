@@ -11,10 +11,9 @@ function Projects() {
         </p>
       </div>
       <div className="grid grid-col  divide-y">
-        {PROJECTS.map((project, index) => (
+        {PROJECTS.map((project) => (
           <div key={project.id} className="py-8">
             <ProjectCard project={project} />
-   
           </div>
         ))}
       </div>
