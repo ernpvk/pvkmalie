@@ -23,7 +23,7 @@ const TypeWriter = ({ text = "", speed = 100, delay = 1000 }) => {
   }, [currentIndex, text, speed, delay]);
 
   return (
-    <div className="font-headline text-xl md:text-4xl">
+    <div className="font-headline text-xl md:text-4xl ">
       {displayText}
       {<span className="inline-block w-2 h-6 md:h-8 bg-gray-400 ml-1 animate-pulse rounded-sm" />}
     </div>

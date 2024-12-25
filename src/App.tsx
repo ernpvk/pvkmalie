@@ -15,11 +15,11 @@ function App() {
         </section>
         <section
           id="typeWrite"
-          className="h-60 flex items-center justify-center bg-whitePale text-stone-500"
+          className="h-96  flex items-center justify-center bg-whitePale text-stone-500 "
         >
           <TypeWriter text="Let's meet pavika..." speed={150} delay={2000} />
         </section>
-        <section id="about" className="min-h-screen flex items-center">
+        <section id="about" className="min-h-screen flex items-center ">
           <About />
         </section>
 
