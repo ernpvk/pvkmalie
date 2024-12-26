@@ -22,7 +22,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     >
       <div className="md:hidden flex justify-center items-center p-5 relative">
         <div
-          className={`absolute w-48 h-48 rounded-full blur-3xl bg-${project.colorAura}-200/70`}
+          className={`absolute w-48 h-48 rounded-full blur-3xl ${getAuraColor(project.colorAura)}`}
         />
         <img
           src={project.thumbnail}
@@ -40,11 +40,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <div className="flex flex-wrap font-button text-xs items-center gap-4 mt-8 ">
           <div className="flex gap-2 flex-wrap">
-            {project.technologies.map((tech) => (
+            {project.technologies.slice(0, 4).map((tech) => (
               <span key={tech} className="px-3 py-1 bg-stone-100 text-stone-700 rounded-full">
                 {tech}
               </span>
             ))}
+            {project.technologies.length > 4 && (
+              <span className="px-3 py-1 bg-stone-100 text-stone-700 rounded-full">...</span>
+            )}
           </div>
           <span className="flex text-xs items-center gap-4 ">
             <p className="text-stone-500">/</p>

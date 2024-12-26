@@ -18,11 +18,10 @@ export default function SkillSets({ skill, skillSetName }: SkillSetsProps) {
           <div
             key={skill.id}
             className="flex font-body-light items-center gap-1.5 sm:gap-2 
-                     bg-stone-100 p-1.5 sm:p-2 
+                     bg-stone-100/20 p-1.5 sm:p-2 
                      border-[1px] border-stone-200
-                      hover:shadow-md hover:scale-110
-                     transition-all duration-300 ease-in-out
-                     cursor-pointer"
+                     
+                    "
           >
             <StackIcon name={skill.logo} className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
             <p className="text-sm sm:text-base md:text-md text-stone-600">{skill.name}</p>

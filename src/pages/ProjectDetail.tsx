@@ -19,11 +19,11 @@ export default function ProjectDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-whitePale py-16 md:py-24">
+    <div className="min-h-screen bg-white py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <button
           onClick={() => navigate("/")}
-          className="flex items-center gap-2 text-stone-600 hover:text-secondary-2 transition-colors mb-8 font-button"
+          className="flex items-center gap-2 text-stone-600 hover:text-primary-2 transition-colors mb-8 font-button"
         >
           <ArrowLeft /> Back to Home
         </button>
