@@ -12,7 +12,6 @@ export interface ProjectInfo {
   links: {
     github?: string;
     live?: string;
-    demo?: string;
   };
 
   type: "Personal" | "Course";

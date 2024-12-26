@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const navLinks = [
   { title: "About", href: "#about" },
@@ -7,12 +8,13 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [activeSection, setActiveSection] = useState("");
   const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Update active section based on scroll position
       const sections = document.querySelectorAll("section[id]");
 
       sections.forEach((section) => {
@@ -35,10 +37,20 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      (element as HTMLElement).scrollIntoView({ behavior: "smooth" });
+  const handleNavigation = (href: string) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          (element as HTMLElement).scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        (element as HTMLElement).scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -50,15 +62,15 @@ const Navbar = () => {
     >
       <div className="container mx-auto backdrop-blur-sm">
         <div className="flex items-center justify-between h-10 md:h-14">
-          <a href="#home" className="text-2xl font-bold text-gray-800">
+          <button onClick={() => navigate("/")} className="text-2xl font-bold text-gray-800">
             LOGO
-          </a>
+          </button>
 
           <div className="hidden md:flex items-center space-x-8 font-button">
             {navLinks.map(({ title, href }) => (
               <button
                 key={href}
-                onClick={() => scrollToSection(href)}
+                onClick={() => handleNavigation(href)}
                 className={`text-sm transition-colors duration-300 ${
                   activeSection === href.slice(1)
                     ? "text-primary-2 font-button-bold"
