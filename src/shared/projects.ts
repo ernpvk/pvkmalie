@@ -4,7 +4,8 @@ export interface ProjectInfo {
   shortDescription: string;
   fullDescription: string;
   thumbnail: string;
-  images: string[];
+  thumbnailDetail?: string;
+  images?: string[];
   colorAura: string;
 
   technologies: string[];
@@ -12,11 +13,12 @@ export interface ProjectInfo {
   links: {
     github?: string;
     live?: string;
+    figma?: string;
   };
 
   type: "Personal" | "Course";
-  role: string;
-  responsibilities: string[];
+  role?: string;
+  responsibilities?: string[];
 }
 export const PROJECTS: ProjectInfo[] = [
   {
@@ -24,8 +26,9 @@ export const PROJECTS: ProjectInfo[] = [
     name: "PvkMalie Website",
     shortDescription: "Personal website to showcase my projects, skills, and myself",
     fullDescription:
-      "A portfolio website that presents my work, abilities, creativity, and express myself throughout this digital device built with React and Tailwind CSS. With smooth animations, dark mode support, and a clean, minimalist design",
+      "A portfolio website that presents my work, abilities, creativity, and express myself throughout this digital space built with React and Tailwind CSS.",
     thumbnail: "/src/assets/images/projects/pvkmalie/thumbnail.png",
+    thumbnailDetail: "/src/assets/images/projects/pvkmalie/thumbnail.png",
     colorAura: "blue",
     images: [
       "https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=",
@@ -38,7 +41,6 @@ export const PROJECTS: ProjectInfo[] = [
       live: "https://github.com/ernpvk/pvkmalie",
     },
     type: "Personal",
-    role: "Full-stack Developer",
     responsibilities: [
       "Designed and implemented responsive UI components",
       "Implemented smooth animations and transitions",
@@ -47,11 +49,14 @@ export const PROJECTS: ProjectInfo[] = [
   {
     id: "jodjai",
     name: "JodJai",
+
     shortDescription:
-      "Empowering users to track and understand their emotion by daily mood logging and daily journal",
+      "Set personalized goals, journal your thoughts and moods, and track your emotional well-being with our intuitive app",
+
     fullDescription:
-      "A comprehensive mood tracking application that promotes SDG3 Good Health and Well-being mental well-being and emotional awareness. The app features daily mood logging capabilities, weekly mood summaries, and journal functionality, all designed with user engagement and accessibility in mind.",
-    thumbnail: "",
+      "A comprehensive mood tracking application that promotes SDG3 Good Health and Well-being mental well-being and emotional awareness. The app features daily mood logging, weekly mood summaries, and journal, all designed with user engagement and accessibility in mind.",
+    thumbnail: "/src/assets/images/projects/jodjai/jodjai_thumbnail.png",
+    thumbnailDetail: "/src/assets/images/projects/jodjai/jodjai_thumbnailDetail.png",
     colorAura: "purple",
     images: [
       "/src/assets/images/projects/jodjai/1.png",
@@ -59,7 +64,11 @@ export const PROJECTS: ProjectInfo[] = [
       "/src/assets/images/projects/jodjai/3.png",
     ],
     technologies: ["Flutter", "Figma"],
-    links: {},
+    links: {
+      github: "https://github.com/kayjirat/JodJai",
+      figma:
+        "https://www.figma.com/design/hNdvPij38kxgN7EaYrxinA/JodJai-(Copy)?node-id=4-20&t=xMbszyJ5WvULqGzr-1",
+    },
 
     type: "Course",
     role: "Front-end Developer",
@@ -77,23 +86,31 @@ export const PROJECTS: ProjectInfo[] = [
     fullDescription:
       "A mobile application for booking KMUTT workspace facilities. The app focuses on promoting efficient use of campus resources while giving a convenient booking experience for users.",
     thumbnail: "/src/assets/images/projects/jonghong/thumbnail.png",
-    colorAura: "teal",
-    images: [
-      "/src/assets/images/projects/jonghong/1.png",
-      "/src/assets/images/projects/jonghong/2.png",
-    ],
+    thumbnailDetail: "/src/assets/images/projects/jonghong/thumbnail.png",
+    colorAura: "yellow",
+
     technologies: ["Flutter", "Figma"],
-    links: {},
+    links: { github: "https://github.com/kayjirat/JongHong" },
 
     type: "Course",
     role: "Front-end Developer",
-    responsibilities: [
-      "Developed the frontend using Flutter",
-      "Designed UI/UX using Figma",
-      "Enhanced overall user experience",
-    ],
+    responsibilities: ["Developed the frontend using Flutter", "Enhanced overall user experience"],
   },
-
+  {
+    id: "cvkraft",
+    name: "CVKraft",
+    shortDescription:
+      "Interactive CV builder for creating professional cv or resume with real-time preview",
+    fullDescription:
+      "CVKraft(ซีวีครัฟ) is a web application that enables users to create, edit, and manage their professional CV/résumé. Including sections for general information, work experience, educational background, and skills with real-time preview. Users also can export to pdf.",
+    thumbnail: "/src/assets/images/projects/cvkraft/thumbnail.png",
+    thumbnailDetail: "/src/assets/images/projects/cvkraft/thumbnail.png",
+    colorAura: "blue",
+    technologies: ["React.js", "Tailwind CSS"],
+    links: { live: "https://cv-kraft.vercel.app/", github: "https://github.com/ernpvk/CVKraft" },
+    type: "Personal",
+    role: "Front-end Developer",
+  },
   {
     id: "majorapp",
     name: "Major App",

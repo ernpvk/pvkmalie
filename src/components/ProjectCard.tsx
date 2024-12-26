@@ -56,16 +56,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
 
-      <div className="hidden md:flex p-5 relative">
+      <div className="hidden md:flex p-5 relative items-center">
         <img
           src={project.thumbnail}
           alt={`${project.name} preview`}
           className="w-80 h-80 object-contain relative z-10 group-hover:scale-[1.05] transition-transform duration-300"
         />
         <div
-          className={`absolute w-64 h-64 ${getAuraColor(
-            project.colorAura
-          )} rounded-full blur-xl top-0 right-0`}
+          className={`absolute w-64 h-64 ${getAuraColor(project.colorAura)} rounded-full blur-md `}
         />
       </div>
     </div>
