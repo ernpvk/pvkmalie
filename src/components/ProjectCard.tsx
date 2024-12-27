@@ -62,7 +62,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
       {project.thumbnail && (
-        <div className="hidden md:flex p-5 relative items-center">
+        <div className="hidden md:flex p-5 relative items-center justify-center">
           <img
             src={project.thumbnail}
             alt={`${project.name} preview`}

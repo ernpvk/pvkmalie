@@ -47,8 +47,8 @@ export default function ProjectDetail() {
 
               <div
                 className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                     w-full sm:w-96 md:w-[30rem] lg:w-[38rem] xl:w-[46rem] 
-                     h-72 sm:h-80 md:h-96 lg:h-[30rem] xl:h-[34rem]
+                     w-full sm:w-96 md:w-[28rem] lg:w-[36rem] xl:w-[44rem] 
+                     h-70 sm:h-78 md:h-94 lg:h-[28rem] xl:h-[32rem]
                      ${getAuraColor(project.colorAura)} rounded-full blur-2xl  z-10`}
               />
             </div>
@@ -85,6 +85,11 @@ export default function ProjectDetail() {
                 <p className="font-body-light">
                   <span className="font-body-medium">Type:</span> {project.type} Project
                 </p>
+                {project.course && (
+                  <p className="font-body-light">
+                    <span className="font-body-medium">Course:</span> {project.course}
+                  </p>
+                )}
                 {project.role && (
                   <p className="font-body-light">
                     <span className="font-body-medium">Role:</span> {project.role}
@@ -136,7 +141,7 @@ export default function ProjectDetail() {
               )}
               {project.links.figma && (
                 <a
-                  href={project.links.github}
+                  href={project.links.figma}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 border border-primary-2 text-primary-2 rounded-md hover:bg-primary-2 hover:text-white transition-colors font-button flex gap-2 items-center"

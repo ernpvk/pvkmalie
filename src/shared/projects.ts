@@ -16,7 +16,9 @@ export interface ProjectInfo {
     figma?: string;
   };
 
-  type: "Personal" | "Course";
+  type: "Personal" | "Academic";
+  course?: string;
+
   role?: string;
   responsibilities?: string[];
 }
@@ -51,26 +53,22 @@ export const PROJECTS: ProjectInfo[] = [
     name: "JodJai",
 
     shortDescription:
-      "Set personalized goals, journal your thoughts and moods, and track your emotional well-being with our intuitive app",
+      "Journal your thoughts and moods, and track your emotional well-being with our intuitive app",
 
     fullDescription:
       "A comprehensive mood tracking application that promotes SDG3 Good Health and Well-being mental well-being and emotional awareness. The app features daily mood logging, weekly mood summaries, and journal, all designed with user engagement and accessibility in mind.",
     thumbnail: "/src/assets/images/projects/jodjai/jodjai_thumbnail.png",
     thumbnailDetail: "/src/assets/images/projects/jodjai/jodjai_thumbnailDetail.png",
     colorAura: "purple",
-    images: [
-      "/src/assets/images/projects/jodjai/1.png",
-      "/src/assets/images/projects/jodjai/2.png",
-      "/src/assets/images/projects/jodjai/3.png",
-    ],
-    technologies: ["Flutter", "Figma"],
+    technologies: ["Flutter", "Node.js", "Azure SQL", "Figma"],
     links: {
       github: "https://github.com/kayjirat/JodJai",
       figma:
         "https://www.figma.com/design/hNdvPij38kxgN7EaYrxinA/JodJai-(Copy)?node-id=4-20&t=xMbszyJ5WvULqGzr-1",
     },
 
-    type: "Course",
+    type: "Academic",
+    course: "CS22 Integrated project II",
     role: "Front-end Developer",
     responsibilities: [
       "Developed the frontend using Flutter",
@@ -89,12 +87,17 @@ export const PROJECTS: ProjectInfo[] = [
     thumbnailDetail: "/src/assets/images/projects/jonghong/thumbnail.png",
     colorAura: "yellow",
 
-    technologies: ["Flutter", "Figma"],
+    technologies: ["Flutter", "Firebase", "Node.js", "Figma"],
     links: { github: "https://github.com/kayjirat/JongHong" },
 
-    type: "Course",
+    type: "Academic",
+    course: "CSC234 User-Centered Mobile App. Dev. & CSC231 Agile Software Engineering",
     role: "Front-end Developer",
-    responsibilities: ["Developed the frontend using Flutter", "Enhanced overall user experience"],
+    responsibilities: [
+      "Developed the frontend using Flutter",
+      "Contributed in designed UX/UI using Figma",
+      "Enhanced overall user experience",
+    ],
   },
   {
     id: "cvkraft",
@@ -134,6 +137,7 @@ export const PROJECTS: ProjectInfo[] = [
       "Developed responsive design for mobile and desktop views",
     ],
   },
+
   {
     id: "majorapp",
     name: "Major App",
@@ -143,10 +147,11 @@ export const PROJECTS: ProjectInfo[] = [
 
     colorAura: "red",
 
-    technologies: ["TypeScript", "React.js", "Chakra UI"],
-    links: {},
+    technologies: ["TypeScript", "React.js", "Chakra UI", "Node.js", "MariaDB"],
+    links: { github: "https://github.com/CS23-IntegrateProject-1/Major-App" },
 
-    type: "Course",
+    type: "Academic",
+    course: "CS22 Integrated project I",
     role: "Front-end Developer",
     responsibilities: [
       "Developed frontend using TypeScript and React.js",
@@ -155,52 +160,67 @@ export const PROJECTS: ProjectInfo[] = [
     ],
   },
   {
-    id: "carepaw",
-    name: "CarePaw",
-    shortDescription:
-      "Helping pet owners manage and track their pets' card and learn pet tips for their lovely one",
-    fullDescription:
-      "A first solo project focused on creating a web application for managing pet information and providing care tips. The full-stack application features CRUD operations for pet cards and comprehensive pet care guidance.",
-    thumbnail: "/src/assets/images/projects/carepaw/thumbnail.png",
-    colorAura: "green",
-    images: [
-      "/src/assets/images/projects/carepaw/1.png",
-      "/src/assets/images/projects/carepaw/2.png",
-    ],
-    technologies: ["React.js", "Node.js", "MariaDB", "Figma"],
-    links: {},
-
-    type: "Course",
-    role: "Full Stack Developer",
-    responsibilities: [
-      "Designed UX/UI using Figma",
-      "Developed frontend with React.js",
-      "Implemented backend using Node.js",
-      "Managed MariaDB database integration",
-    ],
-  },
-  {
     id: "helmet-detection",
-    name: "Helmet Detection",
-    shortDescription:
-      "Enhancing road safety through AI-powered real-time helmet detection and monitoring",
+    name: "AI Helmet Detection",
+    shortDescription: "Enhancing road safety through AI real-time helmet detection and monitoring",
     fullDescription:
-      "An application that uses YOLOv8 for real-time helmet detection, featuring a web interface for interaction with the AI model. The system combines frontend technologies with Python backend for efficient object detection.",
+      "An application that uses YOLOv8 for real-time helmet detection, featuring a web interface for interaction with the AI model.",
     thumbnail: "/src/assets/images/projects/helmet/thumbnail.png",
+    thumbnailDetail: "/src/assets/images/projects/helmet/thumbnail.png",
     colorAura: "yellow",
-    images: [
-      "/src/assets/images/projects/helmet/1.png",
-      "/src/assets/images/projects/helmet/2.png",
-    ],
-    technologies: ["HTML", "CSS", "JavaScript", "Python", "Flask", "YOLOv8"],
-    links: {},
-    type: "Course",
+    technologies: ["HTML", "CSS", "JavaScript", "Python", "Flask", "OpenCV", "Roboflow", "YOLOv8"],
+    links: { github: "https://github.com/ernpvk/Helmet_Detection" },
+    type: "Academic",
+    course: "CSC340 Artificial Intelligence",
     role: "Full Stack Developer",
     responsibilities: [
       "Designed UX/UI and system workflow",
       "Developed AI model using YOLOv8",
       "Built frontend with HTML, CSS, and JavaScript",
       "Implemented backend using Flask",
+    ],
+  },
+  {
+    id: "kaggle-store-sales",
+    name: "Store Sales Forecasting",
+    shortDescription: "Time series forecasting model to predict store sales in Ecuador",
+    fullDescription:
+      "A data science project that predicts store sales using time series data, including factors like promotions, oil prices, and holidays to forecast future sales.",
+    thumbnail: "/src/assets/images/projects/kaggle/thumbnail.png",
+    thumbnailDetail: "/src/assets/images/projects/kaggle/thumbnail.png",
+    colorAura: "blue",
+    technologies: ["Python", "XGBoost", "Matplotlib", "Pandas", "NumPy", "Scikit-learn"],
+    links: {},
+    type: "Academic",
+    course: "CSC345 Data Science",
+    role: "Data Scientist",
+    responsibilities: [
+      "Achieved 180th place in Kaggle store sales competition with team of 4",
+      "Implemented time series techniques including moving averages and feature engineering",
+      "Developed prediction models with hyperparameter optimization",
+      "Handled data preparation including missing values and outlier detection",
+      "Evaluated model performance using RMSE metrics",
+    ],
+  },
+  {
+    id: "carepaw",
+    name: "CarePaw",
+    shortDescription:
+      "Helping pet owners manage and track their pets' card and learn pet tips for their lovely one",
+    fullDescription:
+      "A first solo project focused on creating a web application for managing pet information and providing care tips. The full-stack application features CRUD operations for pet cards and pet care guidance.",
+    colorAura: "green",
+    technologies: ["React.js", "Node.js", "MariaDB", "Figma"],
+    links: { github: "https://github.com/ernpvk/MiniProject_105" },
+
+    type: "Academic",
+    course: "CSC105 Web Application Development",
+    role: "Full Stack Developer",
+    responsibilities: [
+      "Designed UX/UI using Figma",
+      "Developed frontend with React.js",
+      "Implemented backend using Node.js",
+      "Managed MariaDB database integration",
     ],
   },
 ];
