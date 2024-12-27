@@ -80,7 +80,7 @@ export const PROJECTS: ProjectInfo[] = [
   {
     id: "jonghong",
     name: "JongHong",
-    shortDescription: "Helping KMUTT students efficiently discover and book campus workspaces",
+    shortDescription: "Helping KMUTT students efficiently discover and book S14 room",
     fullDescription:
       "A mobile application for booking KMUTT workspace facilities. The app focuses on promoting efficient use of campus resources while giving a convenient booking experience for users.",
     thumbnail: "/src/assets/images/projects/jonghong/thumbnail.png",
@@ -95,7 +95,7 @@ export const PROJECTS: ProjectInfo[] = [
     role: "Front-end Developer",
     responsibilities: [
       "Developed the frontend using Flutter",
-      "Contributed in designed UX/UI using Figma",
+      "Contributed to designing UX/UI using Figma",
       "Enhanced overall user experience",
     ],
   },

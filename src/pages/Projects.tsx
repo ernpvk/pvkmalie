@@ -14,7 +14,7 @@ function Projects() {
           A collection of my course and personal projects
         </p>
       </div>
-      <div className="grid grid-col  divide-y">
+      <div className="grid grid-col  divide-y-2 divide-dashed">
         {PROJECTS.slice(0, 4).map((project) => (
           <div key={project.id} className="py-8">
             <ProjectCard project={project} />
@@ -23,7 +23,7 @@ function Projects() {
       </div>
       <button
         onClick={() => navigate("/projects")}
-        className="animate-pulse mt-8 px-8 py-2 rounded-3xl border-2 border-primary font-button
+        className="mt-8 px-8 py-2 rounded-3xl border-2 border-primary font-button
         flex items-center justify-center gap-2 text-primary hover:bg-primary hover:text-white
         transition-all duration-300 group"
       >

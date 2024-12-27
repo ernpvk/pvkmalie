@@ -1,12 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { ArrowUp } from "lucide-react";
 import Hero from "./Hero";
 import TypeWriter from "../components/TypeWriter";
 import About from "./About";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
 function Home() {
   const location = useLocation();
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     // Handle direct navigation to sections (e.g., /#about)
@@ -17,11 +20,22 @@ function Home() {
           element.scrollIntoView({ behavior: "smooth" });
         }, 100);
       }
-    } else {
-      // Scroll to top when navigating to home without hash
-      window.scrollTo(0, 0);
     }
+    const handleScroll = () => {
+      const showButton = window.scrollY > 500;
+      setShowScrollTop(showButton);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [location]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <section id="hero" className="min-h-screen flex items-center">
@@ -39,11 +53,23 @@ function Home() {
         <About />
       </section>
 
-      <section id="projects" className="min-h-screen">
+      <section id="projects" className="min-h-screen mb-44">
         <Projects />
       </section>
 
-      <section id="contact" className="min-h-screen flex items-center"></section>
+      <section id="contact" className="">
+        <Contact />
+      </section>
+
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-8 bg-secondary-neon/80 p-3 rounded-full shadow-lg hover:bg-secondary-neon transition-all duration-300 transform hover:-translate-y-1 ${
+          showScrollTop ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        aria-label="Scroll to top"
+      >
+        <ArrowUp className="w-6 h-6 text-white" />
+      </button>
     </>
   );
 }
