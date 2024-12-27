@@ -1,13 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
 import { PROJECTS } from "../shared/projects";
+import { ChevronRight } from "lucide-react";
 
 function Projects() {
   const navigate = useNavigate();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div className="flex flex-col items-center  p-4 md:p-12 lg:p-16 ">
@@ -25,12 +22,16 @@ function Projects() {
         ))}
       </div>
       <button
-        onClick={() => {
-          navigate("/projects");
-        }}
+        onClick={() => navigate("/projects")}
+        className="animate-pulse mt-8 px-8 py-2 rounded-3xl border-2 border-primary font-button
+        flex items-center justify-center gap-2 text-primary hover:bg-primary hover:text-white
+        transition-all duration-300 group"
       >
-        {" "}
-        view more projects
+        <span>View More</span>
+        <ChevronRight
+          size={20}
+          className="transition-transform duration-300 group-hover:translate-x-1"
+        />
       </button>
     </div>
   );

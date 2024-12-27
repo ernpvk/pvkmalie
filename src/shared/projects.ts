@@ -85,7 +85,7 @@ export const PROJECTS: ProjectInfo[] = [
       "A mobile application for booking KMUTT workspace facilities. The app focuses on promoting efficient use of campus resources while giving a convenient booking experience for users.",
     thumbnail: "/src/assets/images/projects/jonghong/thumbnail.png",
     thumbnailDetail: "/src/assets/images/projects/jonghong/thumbnail.png",
-    colorAura: "yellow",
+    colorAura: "orange",
 
     technologies: ["Flutter", "Firebase", "Node.js", "Figma"],
     links: { github: "https://github.com/kayjirat/JongHong" },

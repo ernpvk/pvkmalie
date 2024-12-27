@@ -2,6 +2,8 @@ export const getAuraColor = (color: string) => {
   switch (color) {
     case "blue":
       return "bg-blue-200/40";
+    case "orange":
+      return "bg-orange-200/40";
     case "red":
       return "bg-red-200/40";
     case "green":

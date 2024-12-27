@@ -2,8 +2,16 @@ import { useParams } from "react-router-dom";
 import { PROJECTS } from "../shared/projects";
 import { getAuraColor } from "../utils/getAuraColor";
 import { ExternalLink, Figma, Github } from "lucide-react";
+import { useEffect } from "react";
 
 export default function ProjectDetail() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const { id } = useParams();
   const project = PROJECTS.find((p) => p.id === id);
 
@@ -47,8 +55,8 @@ export default function ProjectDetail() {
 
               <div
                 className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                     w-full sm:w-96 md:w-[28rem] lg:w-[36rem] xl:w-[44rem] 
-                     h-70 sm:h-78 md:h-94 lg:h-[28rem] xl:h-[32rem]
+                     w-full sm:w-80 md:w-[26rem] lg:w-[34rem] xl:w-[42rem] 
+                     h-64 sm:h-72 md:h-80 lg:h-[24rem] xl:h-[28rem]
                      ${getAuraColor(project.colorAura)} rounded-full blur-2xl  z-10`}
               />
             </div>

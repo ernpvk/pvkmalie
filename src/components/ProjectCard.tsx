@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div
       onClick={() => navigate(`/projects/${project.id}`)}
-      className="group flex flex-col md:flex-row bg-white rounded-xl shadow-sm border border-stone-200 hover:shadow-lg transition-all duration-300 hover:cursor-pointer overflow-hidden"
+      className="group flex flex-col md:flex-row bg-white rounded-xl shadow-md border border-stone-200 hover:shadow-lg transition-all duration-300 hover:cursor-pointer overflow-hidden"
     >
       {project.thumbnail && (
         <div className="md:hidden flex justify-center items-center p-5 relative">
