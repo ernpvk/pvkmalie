@@ -23,34 +23,36 @@ export default function ProjectDetail() {
           <hr className="w-2/3 md:w-full " />
         </div>
         <div className="w-full max-w-4xl relative m-20">
-          <div className="flex p-5 items-center justify-center">
-            {project.id === "jodjai" ? (
-              <img
-                src={project.thumbnailDetail}
-                alt={`${project.name} preview`}
-                className="w-full sm:w-96 md:w-[32rem] lg:w-[40rem] xl:w-[48rem] 
+          {project.thumbnail && (
+            <div className="flex p-5 items-center justify-center">
+              {project.id === "jodjai" ? (
+                <img
+                  src={project.thumbnailDetail}
+                  alt={`${project.name} preview`}
+                  className="w-full sm:w-96 md:w-[32rem] lg:w-[40rem] xl:w-[48rem] 
        object-contain relative z-20
        hover:scale-110 transition-transform duration-300 ease-in-out 
        cursor-pointer"
-              />
-            ) : (
-              <img
-                src={project.thumbnailDetail}
-                alt={`${project.name} preview`}
-                className="w-full sm:w-96 md:w-[28rem] lg:w-[32rem] xl:w-[36rem] 
+                />
+              ) : (
+                <img
+                  src={project.thumbnailDetail}
+                  alt={`${project.name} preview`}
+                  className="w-full sm:w-96 md:w-[28rem] lg:w-[32rem] xl:w-[36rem] 
        object-contain relative z-20
        hover:scale-110 transition-transform duration-300 ease-in-out 
        cursor-pointer"
-              />
-            )}
+                />
+              )}
 
-            <div
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+              <div
+                className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                      w-full sm:w-96 md:w-[30rem] lg:w-[38rem] xl:w-[46rem] 
                      h-72 sm:h-80 md:h-96 lg:h-[30rem] xl:h-[34rem]
                      ${getAuraColor(project.colorAura)} rounded-full blur-2xl  z-10`}
-            />
-          </div>
+              />
+            </div>
+          )}
         </div>
 
         <div className="w-full max-w-4xl shadow-md rounded-lg p-8 mb-8 font-body-light bg-white relative z-30 border-[1px] border-stone-200">
@@ -68,9 +70,10 @@ export default function ProjectDetail() {
               <div className="md:col-span-2">
                 <h3 className="text-xl font-headline text-stone-600 mb-4">Responsibilities</h3>
                 <ul className="list-disc list-inside space-y-2 text-stone-500 font-body-light">
-                  {project.responsibilities.map((responsibility, index) => (
-                    <li key={index}>{responsibility}</li>
-                  ))}
+                  {project.responsibilities &&
+                    project.responsibilities.map((responsibility, index) => (
+                      <li key={index}>{responsibility}</li>
+                    ))}
                 </ul>
               </div>
             </div>
@@ -90,7 +93,6 @@ export default function ProjectDetail() {
               </div>
             </div>
 
-            {/* Responsi*/}
             <div>
               <h3 className="text-xl font-headline text-stone-600 mb-4">TechStacks</h3>
               <div className="flex flex-wrap gap-2">

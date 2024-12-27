@@ -18,7 +18,7 @@ export default function SkillSets({ skill, skillSetName }: SkillSetsProps) {
           <div
             key={skill.id}
             className="flex font-body-light items-center gap-1.5 sm:gap-2 
-                     bg-stone-100/20 p-1.5 sm:p-2 
+                     bg-white p-1.5 sm:p-2 
                      border-[1px] border-stone-200
                      
                     "

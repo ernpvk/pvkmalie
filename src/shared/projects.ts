@@ -3,7 +3,7 @@ export interface ProjectInfo {
   name: string;
   shortDescription: string;
   fullDescription: string;
-  thumbnail: string;
+  thumbnail?: string;
   thumbnailDetail?: string;
   images?: string[];
   colorAura: string;
@@ -110,6 +110,29 @@ export const PROJECTS: ProjectInfo[] = [
     links: { live: "https://cv-kraft.vercel.app/", github: "https://github.com/ernpvk/CVKraft" },
     type: "Personal",
     role: "Front-end Developer",
+    responsibilities: ["Developed the website with React and Tailwind"],
+  },
+  {
+    id: "clima",
+    name: "Clima",
+    shortDescription: "Real-time weather forecast application with location-based weather search",
+    fullDescription:
+      "A weather application that lets users search for weather conditions by location using the Visual Crossing API. Users can view current temperature, weather conditions, and other essential weather data.",
+    thumbnail: "/src/assets/images/projects/clima/thumbnail.png",
+    thumbnailDetail: "/src/assets/images/projects/clima/thumbnail.png",
+    colorAura: "gray",
+    technologies: ["JavaScript", "CSS", "HTML", "Webpack"],
+    links: {
+      live: "https://ernpvk.github.io/clima/",
+      github: "https://github.com/ernpvk/clima",
+    },
+    type: "Personal",
+    role: "Front-end Developer",
+    responsibilities: [
+      "Implemented weather data fetching using Visual Crossing API",
+      "Created dynamic UI that responds to weather conditions",
+      "Developed responsive design for mobile and desktop views",
+    ],
   },
   {
     id: "majorapp",
@@ -117,9 +140,9 @@ export const PROJECTS: ProjectInfo[] = [
     shortDescription: "Enabling moviegoers to seamlessly browse and book cinema tickets",
     fullDescription:
       "Part of the larger Harmoni app ecosystem, Major is a web application for booking movie tickets. Developed in collaboration with 40+ computer science students, the application provides a seamless movie ticket booking experience.",
-    thumbnail: "/src/assets/images/projects/major/thumbnail.png",
+
     colorAura: "red",
-    images: ["/src/assets/images/projects/major/1.png", "/src/assets/images/projects/major/2.png"],
+
     technologies: ["TypeScript", "React.js", "Chakra UI"],
     links: {},
 
