@@ -82,13 +82,13 @@ const Navbar = () => {
             ))}
             <button
               className="text-sm transition-colors duration-300 
-                text-stone-500 hover:text-secondary hover:bg-secondary-neon bg-secondary px-2 py-1"
+               text-white bg-secondary-neon/80 px-2 py-1"
             >
               resume
             </button>
           </div>
 
-          {/* Responsive menu */}
+          {/* menu */}
           <button className="md:hidden text-gray-600 hover:text-gray-900">
             <svg
               className="w-6 h-6"

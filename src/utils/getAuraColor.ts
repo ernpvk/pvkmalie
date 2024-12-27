@@ -14,6 +14,8 @@ export const getAuraColor = (color: string) => {
       return "bg-yellow-200/40";
     case "teal":
       return "bg-teal-200/40";
+    case "gray":
+      return "bg-gray-200/40";
     default:
       return "bg-stone-200/40";
   }
