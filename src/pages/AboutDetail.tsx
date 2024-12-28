@@ -103,7 +103,7 @@ function AboutDetail() {
                         <div className="grid grid-cols-2 grid-rows-2 gap-3 h-full">
                           <div className="relative">
                             <img
-                              src="src/assets/images/about/punrak/punrak16-1.JPG"
+                              src="/assets/images/about/punrak/punrak16-1.JPG"
                               alt="Tue Pun Rak Main"
                               className="w-full h-full object-cover object-right-bottom rounded-sm shadow-sm"
                             />
@@ -181,21 +181,21 @@ function AboutDetail() {
                         <div className="grid grid-cols-2 grid-rows-2 gap-3 h-full">
                           <div className="relative row-span-2 col-span-1">
                             <img
-                              src="src/assets/images/about/punrak/punrak17-1.JPEG"
+                              src="/assets/images/about/punrak/punrak17-1.JPEG"
                               alt="TuePunRak 17 First"
                               className="w-full h-full object-cover rounded-sm shadow-sm"
                             />
                           </div>
                           <div className="relative">
                             <img
-                              src="src/assets/images/about/punrak/punrak17-2.JPEG"
+                              src="/assets/images/about/punrak/punrak17-2.JPEG"
                               alt="TuePunRak 17 Second"
                               className="w-full h-full object-cover rounded-sm shadow-sm"
                             />
                           </div>
                           <div className="relative">
                             <img
-                              src="src/assets/images/about/punrak/punrak17-3.JPEG"
+                              src="/assets/images/about/punrak/punrak17-3.JPEG"
                               alt="TuePunRak 17 Third"
                               className="w-full h-full object-cover rounded-sm shadow-sm"
                             />
