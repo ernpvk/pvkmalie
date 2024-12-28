@@ -11,7 +11,7 @@ function AboutDetail() {
 
           <div className="w-80 h-80 mb-6 animate-[fadeIn_1s_ease-in]">
             <img
-              src="/src/assets/images/about/profile_pic.PNG"
+              src="/assets/images/about/profile_pic.PNG"
               alt="Profile"
               className="w-full h-full object-cover bg-white border-[1px] border-gray-200"
             />
@@ -110,21 +110,21 @@ function AboutDetail() {
                           </div>
                           <div className="relative">
                             <img
-                              src="/src/assets/images/about/punrak/punrak16-2.JPG"
+                              src="/assets/images/about/punrak/punrak16-2.JPG"
                               alt="Tue Pun Rak Secondary"
                               className="w-full h-full object-cover rounded-sm shadow-sm"
                             />
                           </div>
                           <div className="relative">
                             <img
-                              src="/src/assets/images/about/punrak/punrak16-3.png"
+                              src="/assets/images/about/punrak/punrak16-3.png"
                               alt="Tue Pun Rak Third"
                               className="w-full h-full object-cover rounded-sm shadow-sm"
                             />
                           </div>
                           <div className="relative">
                             <img
-                              src="/src/assets/images/about/punrak/punrak16-4.png"
+                              src="/assets/images/about/punrak/punrak16-4.png"
                               alt="Tue Pun Rak Fourth"
                               className="w-full h-full object-cover rounded-sm shadow-sm"
                             />

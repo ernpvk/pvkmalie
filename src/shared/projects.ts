@@ -29,8 +29,8 @@ export const PROJECTS: ProjectInfo[] = [
     shortDescription: "Personal website to showcase my projects, skills, and myself",
     fullDescription:
       "A portfolio website that presents my work, abilities, creativity, and express myself throughout this digital space built with React and Tailwind CSS.",
-    thumbnail: "/src/assets/images/projects/pvkmalie/thumbnail.png",
-    thumbnailDetail: "/src/assets/images/projects/pvkmalie/thumbnail.png",
+    thumbnail: "/assets/images/projects/pvkmalie/thumbnail.png",
+    thumbnailDetail: "/assets/images/projects/pvkmalie/thumbnail.png",
     colorAura: "blue",
     images: [
       "https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=",
@@ -57,8 +57,8 @@ export const PROJECTS: ProjectInfo[] = [
 
     fullDescription:
       "A comprehensive mood tracking application that promotes SDG3 Good Health and Well-being mental well-being and emotional awareness. The app features daily mood logging, weekly mood summaries, and journal, all designed with user engagement and accessibility in mind.",
-    thumbnail: "/src/assets/images/projects/jodjai/jodjai_thumbnail.png",
-    thumbnailDetail: "/src/assets/images/projects/jodjai/jodjai_thumbnailDetail.png",
+    thumbnail: "/assets/images/projects/jodjai/jodjai_thumbnail.png",
+    thumbnailDetail: "/assets/images/projects/jodjai/jodjai_thumbnailDetail.png",
     colorAura: "purple",
     technologies: ["Flutter", "Node.js", "Azure SQL", "Figma"],
     links: {
@@ -83,8 +83,8 @@ export const PROJECTS: ProjectInfo[] = [
     shortDescription: "Helping KMUTT students efficiently discover and book S14 room",
     fullDescription:
       "A mobile application for booking KMUTT workspace facilities. The app focuses on promoting efficient use of campus resources while giving a convenient booking experience for users.",
-    thumbnail: "/src/assets/images/projects/jonghong/thumbnail.png",
-    thumbnailDetail: "/src/assets/images/projects/jonghong/thumbnail.png",
+    thumbnail: "/assets/images/projects/jonghong/thumbnail.png",
+    thumbnailDetail: "/assets/images/projects/jonghong/thumbnail.png",
     colorAura: "orange",
 
     technologies: ["Flutter", "Firebase", "Node.js", "Figma"],
@@ -106,8 +106,8 @@ export const PROJECTS: ProjectInfo[] = [
       "Interactive CV builder for creating professional cv or resume with real-time preview",
     fullDescription:
       "CVKraft(ซีวีครัฟ) is a web application that enables users to create, edit, and manage their professional CV/résumé. Including sections for general information, work experience, educational background, and skills with real-time preview. Users also can export to pdf.",
-    thumbnail: "/src/assets/images/projects/cvkraft/thumbnail.png",
-    thumbnailDetail: "/src/assets/images/projects/cvkraft/thumbnail.png",
+    thumbnail: "/assets/images/projects/cvkraft/thumbnail.png",
+    thumbnailDetail: "/assets/images/projects/cvkraft/thumbnail.png",
     colorAura: "blue",
     technologies: ["React.js", "Tailwind CSS"],
     links: { live: "https://cv-kraft.vercel.app/", github: "https://github.com/ernpvk/CVKraft" },
@@ -121,8 +121,8 @@ export const PROJECTS: ProjectInfo[] = [
     shortDescription: "Real-time weather forecast application with location-based weather search",
     fullDescription:
       "A weather application that lets users search for weather conditions by location using the Visual Crossing API. Users can view current temperature, weather conditions, and other essential weather data.",
-    thumbnail: "/src/assets/images/projects/clima/thumbnail.png",
-    thumbnailDetail: "/src/assets/images/projects/clima/thumbnail.png",
+    thumbnail: "/assets/images/projects/clima/thumbnail.png",
+    thumbnailDetail: "/assets/images/projects/clima/thumbnail.png",
     colorAura: "gray",
     technologies: ["JavaScript", "CSS", "HTML", "Webpack"],
     links: {
@@ -165,8 +165,8 @@ export const PROJECTS: ProjectInfo[] = [
     shortDescription: "Enhancing road safety through AI real-time helmet detection and monitoring",
     fullDescription:
       "An application that uses YOLOv8 for real-time helmet detection, featuring a web interface for interaction with the AI model.",
-    thumbnail: "/src/assets/images/projects/helmet/thumbnail.png",
-    thumbnailDetail: "/src/assets/images/projects/helmet/thumbnail.png",
+    thumbnail: "/assets/images/projects/helmet/thumbnail.png",
+    thumbnailDetail: "/assets/images/projects/helmet/thumbnail.png",
     colorAura: "yellow",
     technologies: ["HTML", "CSS", "JavaScript", "Python", "Flask", "OpenCV", "Roboflow", "YOLOv8"],
     links: { github: "https://github.com/ernpvk/Helmet_Detection" },
@@ -186,8 +186,8 @@ export const PROJECTS: ProjectInfo[] = [
     shortDescription: "Time series forecasting model to predict store sales in Ecuador",
     fullDescription:
       "A data science project that predicts store sales using time series data, including factors like promotions, oil prices, and holidays to forecast future sales.",
-    thumbnail: "/src/assets/images/projects/kaggle/thumbnail.png",
-    thumbnailDetail: "/src/assets/images/projects/kaggle/thumbnail.png",
+    thumbnail: "/assets/images/projects/kaggle/thumbnail.png",
+    thumbnailDetail: "/assets/images/projects/kaggle/thumbnail.png",
     colorAura: "blue",
     technologies: ["Python", "XGBoost", "Matplotlib", "Pandas", "NumPy", "Scikit-learn"],
     links: {},

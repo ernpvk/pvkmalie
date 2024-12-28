@@ -65,7 +65,7 @@ const Navbar = () => {
         <div className="mx-4 my-2 bg-white/20 backdrop-blur-sm rounded-xl">
           <div className="flex items-center justify-between h-10 px-4 py-6">
             <button onClick={() => navigate("/")} className="flex items-center">
-              <img src="/src/assets/images/logo.png" alt="logo" className="w-7 h-7" />
+              <img src="/assets/images/logo.png" alt="logo" className="w-7 h-7" />
             </button>
             
             <div className="hidden md:flex items-center space-x-8 font-button">

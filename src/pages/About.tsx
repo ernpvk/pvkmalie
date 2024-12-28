@@ -9,7 +9,7 @@ function About() {
       <div className="w-full flex flex-col md:flex-row justify-center items-center mb-14">
         <div className="transition-transform cursor-grab hover:rotate-6 w-full md:w-1/3 flex justify-center md:justify-end">
           <img
-            src="src/assets/images/about/profile_pic.png"
+            src="/assets/images/about/profile_pic.PNG"
             alt="pavika picture"
             className="h-[300px] md:h-4/5 object-contain"
           />

@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import AboutDetail from "./pages/AboutDetail";
-import ProjectDetail from "./pages/ProjectDetail";
-import ProjectList from "./pages/ProjectsList";
+import { ReactNode, Suspense } from "react";
+import React from "react";
 
-import { ReactNode } from "react";
+const Home = React.lazy(() => import("./pages/Home"));
+const AboutDetail = React.lazy(() => import("./pages/AboutDetail"));
+const ProjectDetail = React.lazy(() => import("./pages/ProjectDetail"));
+const ProjectList = React.lazy(() => import("./pages/ProjectsList"));
+
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
@@ -20,12 +22,14 @@ function App() {
   return (
     <Router>
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutDetail />} />
-          <Route path="/projects" element={<ProjectList />} />
-          <Route path="/projects/:id" element={<ProjectDetail />} />
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutDetail />} />
+            <Route path="/projects" element={<ProjectList />} />
+            <Route path="/projects/:id" element={<ProjectDetail />} />
+          </Routes>
+        </Suspense>
       </Layout>
     </Router>
   );
