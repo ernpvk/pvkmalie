@@ -8,7 +8,6 @@ const AboutDetail = React.lazy(() => import("./pages/AboutDetail"));
 const ProjectDetail = React.lazy(() => import("./pages/ProjectDetail"));
 const ProjectList = React.lazy(() => import("./pages/ProjectsList"));
 
-
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -22,14 +21,12 @@ function App() {
   return (
     <Router>
       <Layout>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutDetail />} />
-            <Route path="/projects" element={<ProjectList />} />
-            <Route path="/projects/:id" element={<ProjectDetail />} />
-          </Routes>
-        </Suspense>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutDetail />} />
+          <Route path="/projects" element={<ProjectList />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+        </Routes>
       </Layout>
     </Router>
   );
