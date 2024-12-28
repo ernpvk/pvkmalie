@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import { ReactNode, Suspense } from "react";
+import { ReactNode } from "react";
 import React from "react";
 
 const Home = React.lazy(() => import("./pages/Home"));
