@@ -7,11 +7,11 @@ function AboutDetail() {
         {/* Header Section */}
         <section className="mb-12 flex flex-col justify-center items-center">
           <hr className="w-full mb-8" />
-          <h1 className="text-4xl md:text-6xl font-headline text-primary mb-8 uppercase">
+          <h1 className="text-4xl md:text-6xl font-headline text-primary mb-8 uppercase animate-[slideInDown_1s_ease-out]">
             Nice to meet you !
           </h1>
 
-          <div className="w-80 h-80 mb-6">
+          <div className="w-80 h-80 mb-6 animate-[fadeIn_1s_ease-in]">
             <img
               src="/src/assets/images/about/profile_pic.PNG"
               alt="Profile"
@@ -20,7 +20,7 @@ function AboutDetail() {
           </div>
 
           <span className="mb-8 flex flex-col items-center">
-            <h2 className="text-3xl md:text-5xl font-headline text-primary mb-2">
+            <h2 className="text-3xl md:text-5xl font-headline text-primary mb-2 animate-[slideInUp_1s_ease-out_0.5s]">
               My name is Pavika
             </h2>
             <p className="font-headline text-primary text-xl">( Pavika Malipan )</p>
@@ -97,8 +97,8 @@ function AboutDetail() {
               <h3 className="text-xl font-body-medium text-primary mb-6">Other Passion</h3>
               <p className="mb-6 font-body-light">Life beyond the screen ⸜(*ˊᵕˋ*)⸝</p>
               <div className="space-y-6">
-                {/* ปันรักๅ */}
-                <div className="bg-white shadow-sm border border-gray-100">
+                {/* ปันรัก */}
+                <div className="bg-white shadow-sm border border-gray-100 animate-[fadeInUp_1s_ease-out]">
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="h-80 md:h-96">
                       <div className="h-full p-3 bg-rose-200/50">
@@ -160,7 +160,7 @@ function AboutDetail() {
                 </div>
 
                 {/* ปันรัก2 */}
-                <div className="bg-white shadow-sm border border-gray-100">
+                <div className="bg-white shadow-sm border border-gray-100 animate-[fadeInUp_1s_ease-out]">
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="p-8 font-body-light flex flex-col justify-center space-y-4 order-2 md:order-1">
                       <h4 className="font-body-medium text-stone-600 text-lg ">
