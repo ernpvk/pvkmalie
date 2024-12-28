@@ -1,5 +1,3 @@
-import React from "react";
-
 function AboutDetail() {
   return (
     <div className="flex flex-col bg-whitePale min-h-screen">
