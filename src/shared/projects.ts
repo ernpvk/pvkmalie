@@ -141,7 +141,7 @@ export const PROJECTS: ProjectInfo[] = [
   {
     id: "majorapp",
     name: "Major App",
-    shortDescription: "Enabling moviegoers to seamlessly browse and book cinema tickets",
+    shortDescription: "Enabling moviegoers to seamlessly browse and book movie tickets",
     fullDescription:
       "Part of the larger Harmoni app ecosystem, Major is a web application for booking movie tickets. Developed in collaboration with 40+ computer science students, the application provides a seamless movie ticket booking experience.",
 

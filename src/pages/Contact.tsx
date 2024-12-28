@@ -35,7 +35,9 @@ function Contact() {
               className="min-w-[200px] md:min-w-[280px] bg-white p-4 rounded-xl shadow-sm hover:shadow-md transform hover:-translate-y-1 transition-all duration-300 group"
             >
               <div className="flex items-center space-x-3">
-                <div className="bg-secondary-yellow/20 p-2 rounded-full group-hover:bg-secondary-yellow/40 transition-colors duration-300">
+                <div
+                  className={`bg-primary-2/30 p-2 rounded-full group-hover:bg-primary-2/50 transition-colors duration-300`}
+                >
                   {getIcon(box.icon)}
                 </div>
                 <div className="flex flex-col items-start">

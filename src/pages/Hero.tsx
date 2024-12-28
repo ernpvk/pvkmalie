@@ -92,7 +92,7 @@ function Hero() {
               document.getElementById("typeWrite")?.scrollIntoView({ behavior: "smooth" })
             }
             className="animate-pulse
-              text-xs
+              text-xs font-button
               text-stone-600font-button py-1 px-2 rounded-xs hover:underline hover:bg-stone-600 hover:text-pale border-b border-stone-600 transition-colors md:text-sm shadow-lg"
           >
             ↓ Discover More

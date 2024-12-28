@@ -7,7 +7,7 @@ function ProjectList() {
       <div className="flex flex-col items-center mt-40 mb-16">
         <h1 className="text-4xl lg:text-6xl font-bold text-primary font-headline">PROJECTS</h1>
         <p className="uppercase mt-2 font-button text-center text-sm md:text-md text-stone-500">
-          A full collection of my course and personal projects
+          A full collection of my academic and personal projects
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2  gap-x-10">

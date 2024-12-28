@@ -11,7 +11,7 @@ function Projects() {
       <div className="flex flex-col items-center mt-40 mb-16">
         <h1 className="text-3xl lg:text-6xl font-bold text-primary font-headline">PROJECTS</h1>
         <p className="uppercase mt-2 font-button text-center text-stone-500 text-md md:text-lg">
-          A collection of my course and personal projects
+          A collection of my academic and personal projects
         </p>
       </div>
       <div className="grid grid-col  divide-y-2 divide-dashed">

@@ -1,4 +1,20 @@
 @font-face {
+  font-family: "Beautiful-Light";
+  src: url("/src/assets/fonts/BeautifulLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Beautiful-Light-Italic";
+  src: url("/src/assets/fonts/BeautifulLightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "ClearFace-Regular";
   src: url("/src/assets/fonts/ClearfaceStd-Regular.woff") format("woff");
   font-weight: 400;

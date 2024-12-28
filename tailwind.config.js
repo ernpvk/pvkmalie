@@ -20,8 +20,8 @@ module.exports = {
         accent: "#abcdef",
       },
       fontFamily: {
-        headline: ["ClearFace-Regular", "serif"],
-        "headline-italic": ["ClearFace-Regular-Italic", "serif"],
+        headline: ["Beautiful-Light", "serif"],
+        "headline-italic": ["Beautiful-Light-Italic", "serif"],
         "body-light": ["Metallophile-Light", "sans-serif"],
         "body-light-italic": ["Metallophile-Light-Italic", "sans-serif"],
         "body-medium": ["Metallophile-Medium", "sans-serif"],
@@ -30,6 +30,18 @@ module.exports = {
         "button-italic": ["SpaceMono-Regular-Italic", "monospace"],
         "button-bold": ["SpaceMono-Bold", "monospace"],
         "button-bold-italic": ["SpaceMono-Bold-Italic", "monospace"],
+      },
+      keyframes: {
+        slideDown: {
+          "0%": {
+            transform: "translateY(-10px)",
+            opacity: 0,
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: 1,
+          },
+        },
       },
     },
   },
