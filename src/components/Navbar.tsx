@@ -12,6 +12,7 @@ const Navbar = () => {
   const location = useLocation();
   const [activeSection, setActiveSection] = useState("");
   const [showNav, setShowNav] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,52 +57,77 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 px-5 py-2 lg:p-0 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         showNav ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-20"
       }`}
     >
-      <div className="container mx-auto backdrop-blur-sm">
-        <div className="flex items-center justify-between h-10 md:h-14">
-          <button onClick={() => navigate("/")} className="text-2xl font-bold text-gray-800">
-            LOGO
-          </button>
+      <div className="container mx-auto">
+        <div className="mx-4 my-2 bg-white/20 backdrop-blur-sm rounded-xl">
+          <div className="flex items-center justify-between h-10 px-4 py-6">
+            <button onClick={() => navigate("/")} className="flex items-center">
+              <img src="/src/assets/images/logo.png" alt="logo" className="w-7 h-7" />
+            </button>
+            
+            <div className="hidden md:flex items-center space-x-8 font-button">
+              {navLinks.map(({ title, href }) => (
+                <button
+                  key={href}
+                  onClick={() => handleNavigation(href)}
+                  className={`text-sm transition-colors duration-300 ${
+                    activeSection === href.slice(1)
+                      ? "text-primary-2 font-button-bold"
+                      : "text-stone-600 hover:text-primary-2"
+                  }`}
+                >
+                  {title}
+                </button>
+              ))}
+              <button className="text-sm text-white bg-secondary-neon/80 px-3 py-1">resume</button>
+            </div>
 
-          <div className="hidden md:flex items-center space-x-8 font-button">
-            {navLinks.map(({ title, href }) => (
-              <button
-                key={href}
-                onClick={() => handleNavigation(href)}
-                className={`text-sm transition-colors duration-300 ${
-                  activeSection === href.slice(1)
-                    ? "text-primary-2 font-button-bold"
-                    : "text-stone-600 hover:text-primary-2 "
-                }`}
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-stone-600">
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                {title}
-              </button>
-            ))}
-            <button
-              className="text-sm transition-colors duration-300 
-               text-white bg-secondary-neon/80 px-2 py-1"
-            >
-              resume
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
             </button>
           </div>
 
-          {/* menu */}
-          <button className="md:hidden text-gray-600 hover:text-gray-900">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          {isMenuOpen && (
+            <div
+              className="md:hidden px-4 py-2 border-t border-gray-200
+           animate-[slideDown_0.3s_ease-out]"
             >
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
+              <div className="flex flex-col space-y-2">
+                {navLinks.map(({ title, href }) => (
+                  <button
+                    key={href}
+                    onClick={() => {
+                      handleNavigation(href);
+                      setIsMenuOpen(false);
+                    }}
+                    className={`text-sm text-left py-1 font-button ${
+                      activeSection === href.slice(1)
+                        ? "text-primary-2 font-button-bold"
+                        : "text-stone-600"
+                    }`}
+                  >
+                    {title}
+                  </button>
+                ))}
+                <button className="text-sm text-white bg-secondary-neon/80 px-3 py-1 w-fit font-button">
+                  resume
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </nav>
