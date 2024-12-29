@@ -95,7 +95,7 @@ const Navbar = () => {
                   {title}
                 </button>
               ))}
-              <button className="text-sm text-white bg-secondary-neon/80 px-3 py-1">resume</button>
+              {/* <button className="text-sm text-white bg-secondary-neon/80 px-3 py-1">resume</button> */}
             </div>
 
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-stone-600">
@@ -132,9 +132,9 @@ const Navbar = () => {
                     {title}
                   </button>
                 ))}
-                <button className="text-sm text-white bg-secondary-neon/80 px-3 py-1 w-fit font-button">
+                {/* <button className="text-sm text-white bg-secondary-neon/80 px-3 py-1 w-fit font-button">
                   resume
-                </button>
+                </button> */}
               </div>
             </div>
           )}
