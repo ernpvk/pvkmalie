@@ -20,8 +20,8 @@ module.exports = {
         accent: "#abcdef",
       },
       fontFamily: {
-        headline: ["Beautiful-Light", "serif"],
-        "headline-italic": ["Beautiful-Light-Italic", "serif"],
+        headline: ["Beautiful-Regular", "serif"],
+        "headline-italic": ["Beautiful-Regular-Italic", "serif"],
         "body-light": ["Metallophile-Light", "sans-serif"],
         "body-light-italic": ["Metallophile-Light-Italic", "sans-serif"],
         "body-medium": ["Metallophile-Medium", "sans-serif"],

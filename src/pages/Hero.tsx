@@ -79,8 +79,8 @@ function Hero() {
         <div className="max-w-4xl font-headline text-1xl md:text-3xl tracking-wide mb-20">
           <p className="leading-relaxed">
             <span className="font-headline-italic">₊*</span> she crafts{" "}
-            <span className="">beautiful digital spaces</span> & fast with experiments ˗ˋ bringing{" "}
-            <span className="italic">ideas to life</span> with{" "}
+            <span className="">beautiful digital spaces</span> & logically crafts & explores ˗ˋ
+            bringing <span className="italic">ideas to life</span> with{" "}
             <span className="underline">code</span> & <span className="underline">creativity</span>{" "}
             ｡˚ when not coding, you'll find her at the <span className="">beach</span> and playing
             with cats and dogs ꕁ

@@ -24,31 +24,6 @@ export interface ProjectInfo {
 }
 export const PROJECTS: ProjectInfo[] = [
   {
-    id: "pvkmalie-port",
-    name: "PvkMalie Website",
-    shortDescription: "Personal website to showcase my projects, skills, and myself",
-    fullDescription:
-      "A portfolio website that presents my work, abilities, creativity, and express myself throughout this digital space built with React and Tailwind CSS.",
-    thumbnail: "/assets/images/projects/pvkmalie/thumbnail.png",
-    thumbnailDetail: "/assets/images/projects/pvkmalie/thumbnail.png",
-    colorAura: "blue",
-    images: [
-      "https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=",
-      "https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=",
-      "https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=",
-    ],
-    technologies: ["TypeScript", "ReactJS", "Tailwind CSS"],
-    links: {
-      github: "https://github.com/username/portfolio",
-      live: "https://github.com/ernpvk/pvkmalie",
-    },
-    type: "Personal",
-    responsibilities: [
-      "Designed and implemented responsive UI components",
-      "Implemented smooth animations and transitions",
-    ],
-  },
-  {
     id: "jodjai",
     name: "JodJai",
 
@@ -80,7 +55,7 @@ export const PROJECTS: ProjectInfo[] = [
   {
     id: "jonghong",
     name: "JongHong",
-    shortDescription: "Helping KMUTT students efficiently discover and book S14 room",
+    shortDescription: "Helping KMUTT students discover and book S14 room",
     fullDescription:
       "A mobile application for booking KMUTT workspace facilities. The app focuses on promoting efficient use of campus resources while giving a convenient booking experience for users.",
     thumbnail: "/assets/images/projects/jonghong/thumbnail.png",
@@ -137,7 +112,26 @@ export const PROJECTS: ProjectInfo[] = [
       "Developed responsive design for mobile and desktop views",
     ],
   },
-
+  {
+    id: "pvkmalie-port",
+    name: "PVKMALIE",
+    shortDescription: "Personal portfolio website to showcase my projects, skills, and myself",
+    fullDescription:
+      "A portfolio website that presents my work, abilities, creativity, and express myself throughout this digital space built with React and Tailwind CSS.",
+    thumbnail: "/assets/images/projects/pvkmalie/thumbnail.png",
+    thumbnailDetail: "/assets/images/projects/pvkmalie/thumbnail.png",
+    colorAura: "fuchsia",
+    technologies: ["TypeScript", "ReactJS", "Tailwind CSS"],
+    links: {
+      github: "https://github.com/ernpvk/pvkmalie",
+      live: "https://www.pvkmalie.com",
+    },
+    type: "Personal",
+    responsibilities: [
+      "Designed and implemented responsive UI components",
+      "Implemented smooth animations and transitions",
+    ],
+  },
   {
     id: "majorapp",
     name: "Major App",
@@ -157,6 +151,27 @@ export const PROJECTS: ProjectInfo[] = [
       "Developed frontend using TypeScript and React.js",
       "Implemented responsive UI with Chakra UI",
       "Collaborated with large development team",
+    ],
+  },
+  {
+    id: "tictactoe",
+    name: "Tic Tac Toe",
+    shortDescription: "Tic Tac Toe game",
+    fullDescription:
+      "A  Tic Tac Toe game built with vanilla JavaScript showing current player's turn and win/tie status when the game ends",
+    thumbnail: "/assets/images/projects/tictactoe/thumbnail.png",
+    thumbnailDetail: "/assets/images/projects/tictactoe/thumbnail.png",
+    colorAura: "green",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    links: {
+      live: "https://ernpvk.github.io/tic-tac-toe/",
+      github: "https://github.com/ernpvk/tic-tac-toe",
+    },
+    type: "Personal",
+    role: "Frontend Developer",
+    responsibilities: [
+      "Implemented game logic using factory functions and module pattern",
+      "Created responsive UI with vanilla JavaScript DOM manipulation",
     ],
   },
   {

@@ -10,6 +10,8 @@ export const getAuraColor = (color: string) => {
       return "bg-green-200/40";
     case "purple":
       return "bg-purple-200/40";
+    case "fuchsia":
+      return "bg-fuchsia-200/40";
     case "yellow":
       return "bg-yellow-200/40";
     case "teal":
