@@ -6,13 +6,17 @@ import TypeWriter from "../components/TypeWriter";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 function Home() {
   const location = useLocation();
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const hero = useIntersectionObserver();
+  const about = useIntersectionObserver();
+  const projects = useIntersectionObserver();
+  const contact = useIntersectionObserver();
 
   useEffect(() => {
-    // Handle direct navigation to sections (e.g., /#about)
     if (location.hash) {
       const element = document.querySelector(location.hash);
       if (element) {
@@ -38,7 +42,13 @@ function Home() {
 
   return (
     <>
-      <section id="hero" className="min-h-screen flex items-center">
+      <section
+        ref={hero.ref}
+        id="hero"
+        className={`min-h-screen flex items-center transition-all duration-1000 ${
+          hero.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <Hero />
       </section>
 
@@ -49,15 +59,33 @@ function Home() {
         <TypeWriter text="Let's meet pavika..." speed={150} delay={2000} />
       </section>
 
-      <section id="about" className="min-h-screen flex items-center">
+      <section
+        ref={about.ref}
+        id="about"
+        className={`min-h-screen flex items-center transition-all duration-1000 ${
+          about.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <About />
       </section>
 
-      <section id="projects" className="min-h-screen mb-44">
+      <section
+        ref={projects.ref}
+        id="projects"
+        className={`min-h-screen mb-44 transition-all duration-1000 ${
+          projects.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <Projects />
       </section>
 
-      <section id="contact" className="">
+      <section
+        ref={contact.ref}
+        id="contact"
+        className={`transition-all duration-1000 ${
+          contact.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <Contact />
       </section>
 

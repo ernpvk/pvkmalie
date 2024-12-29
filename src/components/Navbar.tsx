@@ -11,32 +11,38 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [activeSection, setActiveSection] = useState("");
-  const [showNav, setShowNav] = useState(false);
+  const [showNav, setShowNav] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section[id]");
+    if (location.pathname === "/") {
+      const handleScroll = () => {
+        const sections = document.querySelectorAll("section[id]");
 
-      sections.forEach((section) => {
-        const sectionTop = (section as HTMLElement).offsetTop - 100;
-        const sectionHeight = (section as HTMLElement).offsetHeight;
-        const sectionId = section.getAttribute("id") || "";
+        sections.forEach((section) => {
+          const sectionTop = (section as HTMLElement).offsetTop - 100;
+          const sectionHeight = (section as HTMLElement).offsetHeight;
+          const sectionId = section.getAttribute("id") || "";
 
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-          setActiveSection(sectionId);
-        }
-        if (sectionId === "hero" && window.scrollY <= sectionTop) {
-          setShowNav(false);
-        } else if (sectionId === "hero" && window.scrollY > sectionTop) {
-          setShowNav(true);
-        }
-      });
-    };
+          if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            setActiveSection(sectionId);
+          }
+          if (sectionId === "hero" && window.scrollY <= sectionTop) {
+            setShowNav(false);
+          } else if (sectionId === "hero" && window.scrollY > sectionTop) {
+            setShowNav(true);
+          }
+        });
+      };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    } else {
+      // If not on home page, always show navbar
+      setShowNav(true);
+      setActiveSection("");
+    }
+  }, [location.pathname]); // Added location.pathname as dependency
 
   const handleNavigation = (href: string) => {
     if (location.pathname !== "/") {
@@ -53,6 +59,7 @@ const Navbar = () => {
         (element as HTMLElement).scrollIntoView({ behavior: "smooth" });
       }
     }
+    setIsMenuOpen(false); // Close mobile menu after navigation
   };
 
   return (
@@ -64,10 +71,16 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="mx-4 my-2 bg-white/20 backdrop-blur-sm rounded-xl">
           <div className="flex items-center justify-between h-10 px-4 py-6">
-            <button onClick={() => navigate("/")} className="flex items-center">
+            <button
+              onClick={() => {
+                navigate("/");
+                setIsMenuOpen(false);
+              }}
+              className="flex items-center"
+            >
               <img src="/assets/images/logo.png" alt="logo" className="w-7 h-7" />
             </button>
-            
+
             <div className="hidden md:flex items-center space-x-8 font-button">
               {navLinks.map(({ title, href }) => (
                 <button
@@ -109,10 +122,7 @@ const Navbar = () => {
                 {navLinks.map(({ title, href }) => (
                   <button
                     key={href}
-                    onClick={() => {
-                      handleNavigation(href);
-                      setIsMenuOpen(false);
-                    }}
+                    onClick={() => handleNavigation(href)}
                     className={`text-sm text-left py-1 font-button ${
                       activeSection === href.slice(1)
                         ? "text-primary-2 font-button-bold"

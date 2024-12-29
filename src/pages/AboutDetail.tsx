@@ -1,15 +1,42 @@
+import { useEffect } from "react";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+
 function AboutDetail() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+  const headerAnimation = useIntersectionObserver();
+  const profileAnimation = useIntersectionObserver();
+  const nameAnimation = useIntersectionObserver();
+  const storyAnimation = useIntersectionObserver();
+  const educationAnimation = useIntersectionObserver();
+  const mottoAnimation = useIntersectionObserver();
+  const activity1Animation = useIntersectionObserver();
+  const activity2Animation = useIntersectionObserver();
   return (
     <div className="flex flex-col bg-whitePale min-h-screen">
       <div className="max-w-7xl mx-auto w-full px-8 md:px-16 py-8 md:py-16">
         {/* Header Section */}
         <section className="mb-12 flex flex-col justify-center items-center">
           <hr className="w-full mb-8" />
-          <h1 className="text-4xl md:text-6xl font-headline text-primary mb-8 uppercase animate-[slideInDown_1s_ease-out]">
+          <h1
+            ref={headerAnimation.ref}
+            className={`text-4xl md:text-6xl font-headline text-primary mb-8 transition-all duration-700 ease-out ${
+              headerAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+            }`}
+          >
             Nice to meet you !
           </h1>
 
-          <div className="w-80 h-80 mb-6 animate-[fadeIn_1s_ease-in]">
+          <div
+            ref={profileAnimation.ref}
+            className={`w-80 h-80 mb-6 transition-all duration-700 ease-out ${
+              profileAnimation.isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+            }`}
+          >
             <img
               src="/assets/images/about/profile_pic.PNG"
               alt="Profile"
@@ -17,8 +44,13 @@ function AboutDetail() {
             />
           </div>
 
-          <span className="mb-8 flex flex-col items-center">
-            <h2 className="text-3xl md:text-5xl font-headline text-primary mb-2 animate-[slideInUp_1s_ease-out_0.5s]">
+          <span
+            ref={nameAnimation.ref}
+            className={`mb-8 flex flex-col items-center transition-all duration-700 ease-out ${
+              nameAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
+            <h2 className="text-3xl md:text-5xl font-headline text-primary mb-2">
               My name is Pavika
             </h2>
             <p className="font-headline text-primary text-xl">( Pavika Malipan )</p>
@@ -31,7 +63,11 @@ function AboutDetail() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <section>
             <h3 className="text-xl font-body-medium text-primary mb-6">My Story</h3>
-            <div className="font-body-light text-stone-600 space-y-4">
+            <div
+              ref={storyAnimation.ref}
+              className={`font-body-light text-stone-600 space-y-4 transition-opacity duration-700 ease-out
+                ${storyAnimation.isVisible ? "opacity-100" : "opacity-0"}`}
+            >
               <p>
                 My tech journey all begin in high school when I saw people making cool things on the
                 internet and phone. Everything that I see looked amazing but I felt like it beyond
@@ -53,7 +89,11 @@ function AboutDetail() {
 
           <section>
             <h3 className="text-xl font-body-medium text-primary mb-6">My Education</h3>
-            <div className="space-y-6">
+            <div
+              ref={educationAnimation.ref}
+              className={`space-y-6 transition-opacity duration-700 ease-out
+                ${educationAnimation.isVisible ? "opacity-100" : "opacity-0"}`}
+            >
               <div className="border-l-2 border-primary pl-4">
                 <div className="mb-6">
                   <h4 className="font-body-medium text-stone-700 mb-3">Present</h4>
@@ -83,7 +123,11 @@ function AboutDetail() {
           <div className="mb-12">
             <section>
               <h3 className="text-xl font-body-medium text-primary mb-6">My Motto</h3>
-              <div className="text-stone-600 font-body-light italic text-lg">
+              <div
+                ref={mottoAnimation.ref}
+                className={`text-stone-600 font-body-light italic text-lg transition-opacity duration-700 ease-out
+                  ${mottoAnimation.isVisible ? "opacity-100" : "opacity-0"}`}
+              >
                 "If you want the rainbow, you gotta put up with the rain"🌈 𑁍ࠬܓ
               </div>
             </section>
@@ -96,7 +140,14 @@ function AboutDetail() {
               <p className="mb-6 font-body-light">Life beyond the screen ⸜(*ˊᵕˋ*)⸝</p>
               <div className="space-y-6">
                 {/* ปันรัก */}
-                <div className="bg-white shadow-sm border border-gray-100 animate-[fadeInUp_1s_ease-out]">
+                <div
+                  ref={activity1Animation.ref}
+                  className={`bg-white shadow-sm border border-gray-100 transition-all duration-700 ease-out ${
+                    activity1Animation.isVisible
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 -translate-x-20"
+                  }`}
+                >
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="h-80 md:h-96">
                       <div className="h-full p-3 bg-rose-200/50">
@@ -158,7 +209,14 @@ function AboutDetail() {
                 </div>
 
                 {/* ปันรัก2 */}
-                <div className="bg-white shadow-sm border border-gray-100 animate-[fadeInUp_1s_ease-out]">
+                <div
+                  ref={activity2Animation.ref}
+                  className={`bg-white shadow-sm border border-gray-100 transition-all duration-700 ease-out ${
+                    activity2Animation.isVisible
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-20"
+                  }`}
+                >
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="p-8 font-body-light flex flex-col justify-center space-y-4 order-2 md:order-1">
                       <h4 className="font-body-medium text-stone-600 text-lg ">

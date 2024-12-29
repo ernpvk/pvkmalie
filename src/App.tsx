@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ReactNode, Suspense } from "react";
 import Navbar from "./components/Navbar";
-import { ReactNode } from "react";
+import { LoadingSpinner } from "./components/LoadingSpinner";
 import React from "react";
 
 const Home = React.lazy(() => import("./pages/Home"));
@@ -12,7 +13,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="">{children}</main>
+      <main className="flex-grow">
+        <Suspense fallback={<LoadingSpinner />}>{children}</Suspense>
+      </main>
     </div>
   );
 };
