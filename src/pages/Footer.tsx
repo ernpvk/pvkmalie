@@ -1,7 +1,7 @@
 import { Mail, Github, Linkedin } from "lucide-react";
 import { contact } from "../shared/contact";
 
-function Contact() {
+function Footer() {
   const getIcon = (icon: string) => {
     switch (icon) {
       case "Github":
@@ -13,7 +13,7 @@ function Contact() {
     }
   };
   return (
-    <div className="bg-secondary-yellow/60 flex flex-col items-center pt-14 p-8 md:p-10 lg:p-12">
+    <div className="bg-secondary-yellow/60 flex flex-col items-center pt-14 mt-16 p-8 md:p-10 lg:p-12">
       <div className="max-w-4xl w-full">
         <div className="text-center mb-8">
           <h1 className="text-3xl md:text-4xl font-headline text-stone-600 mb-3">
@@ -64,4 +64,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Footer;

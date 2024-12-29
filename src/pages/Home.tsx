@@ -5,7 +5,6 @@ import Hero from "./Hero";
 import TypeWriter from "../components/TypeWriter";
 import About from "./About";
 import Projects from "./Projects";
-import Contact from "./Contact";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 function Home() {
@@ -14,7 +13,6 @@ function Home() {
   const hero = useIntersectionObserver();
   const about = useIntersectionObserver();
   const projects = useIntersectionObserver();
-  const contact = useIntersectionObserver();
 
   useEffect(() => {
     if (location.hash) {
@@ -77,16 +75,6 @@ function Home() {
         }`}
       >
         <Projects />
-      </section>
-
-      <section
-        ref={contact.ref}
-        id="contact"
-        className={`transition-all duration-1000 ${
-          contact.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <Contact />
       </section>
 
       <button

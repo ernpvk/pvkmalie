@@ -4,7 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 const navLinks = [
   { title: "About", href: "#about" },
   { title: "Projects", href: "#projects" },
-  { title: "Contact", href: "#contact" },
+  { title: "Contact", href: "#footer" },
 ];
 
 const Navbar = () => {

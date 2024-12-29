@@ -3,7 +3,7 @@ import { ReactNode, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import { LoadingSpinner } from "./components/LoadingSpinner";
 import React from "react";
-
+import Footer from "./pages/Footer";
 const Home = React.lazy(() => import("./pages/Home"));
 const AboutDetail = React.lazy(() => import("./pages/AboutDetail"));
 const ProjectDetail = React.lazy(() => import("./pages/ProjectDetail"));
@@ -16,6 +16,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <main className="flex-grow">
         <Suspense fallback={<LoadingSpinner />}>{children}</Suspense>
       </main>
+      <footer id="footer">
+        <Footer />
+      </footer>
     </div>
   );
 };
