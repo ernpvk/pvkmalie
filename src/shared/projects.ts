@@ -80,7 +80,7 @@ export const PROJECTS: ProjectInfo[] = [
     shortDescription:
       "Interactive CV builder for creating professional cv or resume with real-time preview",
     fullDescription:
-      "CVKraft(ซีวีครัฟ) is a web application that enables users to create, edit, and manage their professional CV/résumé. Including sections for general information, work experience, educational background, and skills with real-time preview. Users also can export to pdf.",
+      "CVKraft(ซีวีครัฟ) is a web application that enables users to create, edit, and manage their professional CV/résumé. Including sections for general information, work experience, educational background, projects and skills with real-time preview. Users also can export to pdf.",
     thumbnail: "/assets/images/projects/cvkraft/thumbnail.png",
     thumbnailDetail: "/assets/images/projects/cvkraft/thumbnail.png",
     colorAura: "blue",
