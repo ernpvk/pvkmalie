@@ -1,5 +1,5 @@
-import { createBrowserRouter } from "react-router-dom";
-import { ReactNode, Suspense } from "react";
+import { createBrowserRouter, Outlet } from "react-router-dom";
+import { Suspense } from "react";
 import React from "react";
 import Navbar from "./components/Navbar";
 import { LoadingSpinner } from "./components/LoadingSpinner";
@@ -10,12 +10,14 @@ const AboutDetail = React.lazy(() => import("./pages/AboutDetail"));
 const ProjectDetail = React.lazy(() => import("./pages/ProjectDetail"));
 const ProjectList = React.lazy(() => import("./pages/ProjectsList"));
 
-const Layout = ({ children }: { children: ReactNode }) => {
+const Layout = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        <Suspense fallback={<LoadingSpinner />}>{children}</Suspense>
+        <Suspense fallback={<LoadingSpinner />}>
+          <Outlet />
+        </Suspense>
       </main>
       <footer id="footer">
         <Footer />
@@ -26,7 +28,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
 export const router = createBrowserRouter([
   {
-    element: <Layout children={undefined} />,
+    element: <Layout />,
     children: [
       {
         path: "/",
