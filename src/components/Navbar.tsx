@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const navLinks = [
   { title: "About", href: "#about" },
@@ -71,21 +71,19 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="mx-4 my-2 bg-white/20 backdrop-blur-sm rounded-xl">
           <div className="flex items-center justify-between h-10 px-4 py-6">
-            <button
-              onClick={() => {
-                navigate("/");
-                setIsMenuOpen(false);
-              }}
-              className="flex items-center"
-            >
+            <Link to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center">
               <img src="/assets/images/logo.png" alt="logo" className="w-7 h-7" />
-            </button>
+            </Link>
 
             <div className="hidden md:flex items-center space-x-8 font-button">
               {navLinks.map(({ title, href }) => (
-                <button
+                <Link
                   key={href}
-                  onClick={() => handleNavigation(href)}
+                  to={href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation(href);
+                  }}
                   className={`text-sm transition-colors duration-300 ${
                     activeSection === href.slice(1)
                       ? "text-primary-2 font-button-bold"
@@ -93,7 +91,7 @@ const Navbar = () => {
                   }`}
                 >
                   {title}
-                </button>
+                </Link>
               ))}
               {/* <button className="text-sm text-white bg-secondary-neon/80 px-3 py-1">resume</button> */}
             </div>
@@ -120,9 +118,13 @@ const Navbar = () => {
             >
               <div className="flex flex-col space-y-2">
                 {navLinks.map(({ title, href }) => (
-                  <button
+                  <Link
                     key={href}
-                    onClick={() => handleNavigation(href)}
+                    to={href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavigation(href);
+                    }}
                     className={`text-sm text-left py-1 font-button ${
                       activeSection === href.slice(1)
                         ? "text-primary-2 font-button-bold"
@@ -130,7 +132,7 @@ const Navbar = () => {
                     }`}
                   >
                     {title}
-                  </button>
+                  </Link>
                 ))}
                 {/* <button className="text-sm text-white bg-secondary-neon/80 px-3 py-1 w-fit font-button">
                   resume
