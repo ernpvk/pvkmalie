@@ -27,4 +27,6 @@ export const FRAMEWORKS: TechItem[] = [
   { id: 2, name: "Flutter", logo: "flutter" },
   { id: 3, name: "MUI", logo: "materialui" },
   { id: 4, name: "Tailwind CSS", logo: "tailwindcss" },
+  { id: 5, name: "Node.js", logo: "nodejs" },
+  { id: 6, name: "Jest", logo: "jest" },
 ];
