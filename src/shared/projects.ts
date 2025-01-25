@@ -40,7 +40,7 @@ export const PROJECTS: ProjectInfo[] = [
     technologies: ["React", "TypeScript", "Tailwind CSS", "Express.js", "Git"],
     
     links: {
-      github: "https://github.com/yourusername/getgad",
+      github: "https://github.com/ernpvk/GetGad",
       live: "https://getgad.vercel.app",
     },
    
