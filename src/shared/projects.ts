@@ -24,6 +24,38 @@ export interface ProjectInfo {
 }
 export const PROJECTS: ProjectInfo[] = [
   {
+    id: "getgad",
+    name: "GetGad",
+   
+    shortDescription: 
+      "E-commerce platform for electronics with real-time search, filtering and cart management",
+   
+    fullDescription:
+      "A responsive e-commerce platform that streamlines the shopping experience for electronic gadgets. Features include real-time product search, category filtering, cart management, and seamless API integration via Express proxy server. Built with focus on user experience and mobile responsiveness.",
+   
+    thumbnail: "/assets/images/projects/getgad/thumbnail.png", 
+    thumbnailDetail: "/assets/images/projects/getgad/thumbnail.png",
+    colorAura: "blue",
+   
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Express.js", "Git"],
+    
+    links: {
+      github: "https://github.com/yourusername/getgad",
+      live: "https://getgad.vercel.app",
+    },
+   
+    type: "Personal",
+    role: "Frontend Developer",
+    
+    responsibilities: [
+      "Built responsive UI with React and Tailwind CSS",
+      "Implemented Express proxy server for API integration",
+      "Created state management using React Context",
+      "Designed mobile-first interface with loading states",
+      "Deployed frontend and server on Vercel with CI/CD"
+    ]
+   },
+  {
     id: "jodjai",
     name: "JodJai",
 
