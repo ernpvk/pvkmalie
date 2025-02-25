@@ -19,6 +19,7 @@ export const TOOLS: TechItem[] = [
   { id: 3, name: "Firebase", logo: "firebase" },
   { id: 4, name: "Postman", logo: "postman" },
   { id: 5, name: "MySQL", logo: "mysql" },
+  { id: 6, name: "Selenium", logo: "selenium" },
 ];
 
 export const FRAMEWORKS: TechItem[] = [
