@@ -72,7 +72,7 @@ function Hero() {
         <h1 className="font-headline text-5xl md:text-7xl mb-8 leading-tight ">
           pavika
           <span className="block text-4xl md:text-6xl mt-4">
-            is a <span className="italic">software engineer</span>
+            is a <span className="italic">software developer</span>
           </span>
         </h1>
 
