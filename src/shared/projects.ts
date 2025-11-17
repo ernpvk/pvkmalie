@@ -16,7 +16,7 @@ export interface ProjectInfo {
     figma?: string;
   };
 
-  type: "Personal" | "Academic";
+  type: "Personal" | "Academic" | "Senior Project (Academic)";
   course?: string;
 
   role?: string;
@@ -24,37 +24,104 @@ export interface ProjectInfo {
 }
 export const PROJECTS: ProjectInfo[] = [
   {
+    id: "khwamkit",
+    name: "KhwamKit",
+
+    shortDescription: "AI Collaborative Thai Mind Map Generator",
+
+    fullDescription:
+      "KhwamKit allows you to effortlessly create and customize mind maps from Thai text, PDFs, and URLs. With real-time collaboration, and drag-and-drop editing, you can easily structure your ideas. The AI-powered tool automatically generates mind maps from your input, streamlining the brainstorming process. Export your mind maps as PDFs or JPGs for seamless sharing.",
+    thumbnail: "/assets/images/projects/khwamkit/thumbnail.png",
+    thumbnailDetail: "/assets/images/projects/khwamkit/thumbnail.png",
+    colorAura: "purple",
+
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Python"],
+
+    links: {
+      live: "https://app.opnxjm.com/",
+    },
+
+    type: "Senior Project (Academic)",
+    role: "Frontend Developer (With some help on backend)",
+
+    responsibilities: [
+      "Built real-time collaborative mind-mapping app (React 19 + WebSocket) with live cursors, locking, and permission control",
+      "Implemented a Python function that processes AI-generated hierarchical data into frontend-ready node coordinates, calculating depth, side, color palette, x/y positions, and subtree-based spacing",
+      "Created 20+ frontend components supporting PDF/URL/text ingestion, interactive canvas tools and export to PDF/image",
+    ],
+  },
+  {
+    id: "bangbill",
+    name: "BangBill",
+
+    shortDescription: "Full-Stack Bill Splitting & Expense Management Platform",
+
+    fullDescription:
+      "BangBill is a comprehensive expense management platform designed for groups to split bills, track payments, and manage shared finances. With PromptPay QR integration, users can easily process payments. The platform includes payment verification workflows, real-time balance calculations, automated financial reporting (PDF/CSV), analytics dashboards, and multilingual support (English/Thai).",
+
+    thumbnail: "/assets/images/projects/bangbill/thumbnail.png",
+    thumbnailDetail: "/assets/images/projects/bangbill/thumbnail.png",
+    colorAura: "pink",
+
+    technologies: [
+      "Spring Boot",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Docker",
+      "JasperReports",
+      "Tailwind CSS",
+      "Google Cloud Platform",
+    ],
+
+    links: {
+      live: "https://bangbill.vercel.app/",
+      github: "https://github.com/ernpvk/bangbill",
+    },
+
+    type: "Personal",
+    role: "Full-Stack Developer",
+
+    responsibilities: [
+      "Developed a full-stack bill-splitting and expense-management web application using React, TypeScript, Spring Boot, and PostgreSQL with multi-language support and real-time analytics dashboards",
+      "Implemented JWT authentication, role-based access control, and integrated a PromptPay QR payment verification workflow",
+      "Integrated JasperReports for generating PDF/CSV financial statements and built data visualizations using Recharts",
+      "Developed real-time balance tracking and automated settlement features for group expense management",
+      "Deployed the application using Docker, with the backend hosted on Google Cloud Platform and the frontend on Vercel",
+    ],
+  },
+  {
     id: "getgad",
     name: "GetGad",
-   
-    shortDescription: 
+
+    shortDescription:
       "E-commerce platform for electronics with real-time search, filtering and cart management",
-   
+
     fullDescription:
       "A responsive e-commerce platform that streamlines the shopping experience for electronic gadgets. Features include real-time product search, category filtering, cart management, and seamless API integration via Express proxy server. Built with focus on user experience and mobile responsiveness.",
-   
-    thumbnail: "/assets/images/projects/getgad/thumbnail.png", 
+
+    thumbnail: "/assets/images/projects/getgad/thumbnail.png",
     thumbnailDetail: "/assets/images/projects/getgad/thumbnail.png",
     colorAura: "blue",
-   
+
     technologies: ["React", "TypeScript", "Tailwind CSS", "Express.js", "Git"],
-    
+
     links: {
       github: "https://github.com/ernpvk/GetGad",
       live: "https://getgad.vercel.app",
     },
-   
+
     type: "Personal",
     role: "Frontend Developer",
-    
+
     responsibilities: [
       "Built responsive UI with React and Tailwind CSS",
       "Implemented Express proxy server for API integration",
       "Created state management using React Context",
       "Designed mobile-first interface with loading states",
-      "Deployed frontend and server on Vercel with CI/CD"
-    ]
-   },
+      "Deployed frontend and server on Vercel with CI/CD",
+    ],
+  },
   {
     id: "jodjai",
     name: "JodJai",
@@ -65,7 +132,8 @@ export const PROJECTS: ProjectInfo[] = [
     fullDescription:
       "A comprehensive mood tracking application that promotes SDG3 Good Health and Well-being mental well-being and emotional awareness. The app features daily mood logging, weekly mood summaries, and journal, all designed with user engagement and accessibility in mind.",
     thumbnail: "/assets/images/projects/jodjai/jodjai_thumbnail.png",
-    thumbnailDetail: "/assets/images/projects/jodjai/jodjai_thumbnailDetail.png",
+    thumbnailDetail:
+      "/assets/images/projects/jodjai/jodjai_thumbnailDetail.png",
     colorAura: "purple",
     technologies: ["Flutter", "Node.js", "Azure SQL", "Figma"],
     links: {
@@ -98,7 +166,8 @@ export const PROJECTS: ProjectInfo[] = [
     links: { github: "https://github.com/kayjirat/JongHong" },
 
     type: "Academic",
-    course: "CSC234 User-Centered Mobile App. Dev. & CSC231 Agile Software Engineering",
+    course:
+      "CSC234 User-Centered Mobile App. Dev. & CSC231 Agile Software Engineering",
     role: "Front-end Developer",
     responsibilities: [
       "Developed the frontend using Flutter",
@@ -117,7 +186,10 @@ export const PROJECTS: ProjectInfo[] = [
     thumbnailDetail: "/assets/images/projects/cvkraft/thumbnail.png",
     colorAura: "blue",
     technologies: ["React.js", "Tailwind CSS"],
-    links: { live: "https://cv-kraft.vercel.app/", github: "https://github.com/ernpvk/CVKraft" },
+    links: {
+      live: "https://cv-kraft.vercel.app/",
+      github: "https://github.com/ernpvk/CVKraft",
+    },
     type: "Personal",
     role: "Front-end Developer",
     responsibilities: ["Developed the website with React and Tailwind"],
@@ -125,7 +197,8 @@ export const PROJECTS: ProjectInfo[] = [
   {
     id: "clima",
     name: "Clima",
-    shortDescription: "Real-time weather forecast application with location-based weather search",
+    shortDescription:
+      "Real-time weather forecast application with location-based weather search",
     fullDescription:
       "A weather application that lets users search for weather conditions by location using the Visual Crossing API. Users can view current temperature, weather conditions, and other essential weather data.",
     thumbnail: "/assets/images/projects/clima/thumbnail.png",
@@ -147,7 +220,8 @@ export const PROJECTS: ProjectInfo[] = [
   {
     id: "pvkmalie-port",
     name: "PVKMALIE",
-    shortDescription: "Personal portfolio website to showcase my projects, skills, and myself",
+    shortDescription:
+      "Personal portfolio website to showcase my projects, skills, and myself",
     fullDescription:
       "A portfolio website that presents my work, abilities, creativity, and express myself throughout this digital space built with React and Tailwind CSS.",
     thumbnail: "/assets/images/projects/pvkmalie/thumbnail.png",
@@ -167,7 +241,8 @@ export const PROJECTS: ProjectInfo[] = [
   {
     id: "majorapp",
     name: "Major App",
-    shortDescription: "Enabling moviegoers to seamlessly browse and book movie tickets",
+    shortDescription:
+      "Enabling moviegoers to seamlessly browse and book movie tickets",
     fullDescription:
       "Part of the larger Harmoni app ecosystem, Major is a web application for booking movie tickets. Developed in collaboration with 40+ computer science students, the application provides a seamless movie ticket booking experience.",
 
@@ -209,13 +284,23 @@ export const PROJECTS: ProjectInfo[] = [
   {
     id: "helmet-detection",
     name: "AI Helmet Detection",
-    shortDescription: "Enhancing road safety through AI real-time helmet detection and monitoring",
+    shortDescription:
+      "Enhancing road safety through AI real-time helmet detection and monitoring",
     fullDescription:
       "An application that uses YOLOv8 for real-time helmet detection, featuring a web interface for interaction with the AI model.",
     thumbnail: "/assets/images/projects/helmet/thumbnail.png",
     thumbnailDetail: "/assets/images/projects/helmet/thumbnail.png",
     colorAura: "yellow",
-    technologies: ["HTML", "CSS", "JavaScript", "Python", "Flask", "OpenCV", "Roboflow", "YOLOv8"],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "OpenCV",
+      "Roboflow",
+      "YOLOv8",
+    ],
     links: { github: "https://github.com/ernpvk/Helmet_Detection" },
     type: "Academic",
     course: "CSC340 Artificial Intelligence",
@@ -230,13 +315,21 @@ export const PROJECTS: ProjectInfo[] = [
   {
     id: "kaggle-store-sales",
     name: "Store Sales Forecasting",
-    shortDescription: "Time series forecasting model to predict store sales in Ecuador",
+    shortDescription:
+      "Time series forecasting model to predict store sales in Ecuador",
     fullDescription:
       "A data science project that predicts store sales using time series data, including factors like promotions, oil prices, and holidays to forecast future sales.",
     thumbnail: "/assets/images/projects/kaggle/thumbnail.png",
     thumbnailDetail: "/assets/images/projects/kaggle/thumbnail.png",
     colorAura: "blue",
-    technologies: ["Python", "XGBoost", "Matplotlib", "Pandas", "NumPy", "Scikit-learn"],
+    technologies: [
+      "Python",
+      "XGBoost",
+      "Matplotlib",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+    ],
     links: {},
     type: "Academic",
     course: "CSC345 Data Science",
